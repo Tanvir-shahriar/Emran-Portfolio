@@ -24,60 +24,168 @@
         }
     </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="./navbar.css" rel="stylesheet">
 </head>
 <body class="bg-pageBg text-gray-800 font-sans antialiased overflow-x-hidden">
 
-    <!-- Top Social Bar (Visible on Mobile) -->
-    <div class="flex justify-between items-center px-4 py-3 bg-gray-50 border-b border-gray-200 md:hidden">
-        <div class="flex items-center gap-3">
-            <a href="#" class="w-7 h-7 rounded-full bg-[#3b5998] text-white flex items-center justify-center text-sm"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="w-7 h-7 rounded-full bg-[#00aced] text-white flex items-center justify-center text-sm"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="w-7 h-7 rounded-full bg-[#007bb6] text-white flex items-center justify-center text-sm"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="w-7 h-7 rounded-full bg-[#cb2027] text-white flex items-center justify-center text-sm"><i class="fab fa-pinterest-p"></i></a>
-            <a href="#" class="text-headerBlue ml-2 text-xl"><i class="fas fa-search"></i></a>
-        </div>
-        <a href="#" class="text-[#009a5a] text-2xl"><i class="fab fa-envira"></i></a>
-    </div>
-
-    <!-- Navigation Header -->
-    <header class="bg-headerBlue text-white md:bg-white md:text-gray-800 shadow-sm sticky top-0 z-50 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto flex justify-between items-stretch h-16 md:h-20">
-            <div class="flex-shrink-0 flex items-center px-4">
-                <div class="text-2xl font-semibold md:font-bold flex items-center gap-2 tracking-wide">
-                    <i class="fab fa-pagelines text-white/80 md:hidden text-3xl"></i> 
-                    <i class="fas fa-globe text-primary hidden md:block"></i>
-                    Yunus Centre[cite: 8]
+    <!-- Reference Navigation Header -->
+    <header class="yc-site-header">
+        <section class="yc-top-area">
+            <div class="yc-container yc-top-grid">
+                <div class="yc-top-left">
+                    <a href="mailto:info@yunuscentre.org" class="yc-top-email">
+                        <i class="fa fa-envelope"></i><span>info@yunuscentre.org</span>
+                    </a>
+                    <ul class="yc-social-list" aria-label="Social links">
+                        <li><a href="https://www.facebook.com/YunusCentre" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.twitter.com/YunusCentre" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.pinterest.com/YunusCentre" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a></li>
+                        <li class="yc-search-cell"><button class="yc-search-trigger" type="button" aria-label="Open search" aria-expanded="false"><i class="fa fa-search"></i></button></li>
+                    </ul>
+                </div>
+                <div class="yc-top-right">
+                    <div class="yc-pedia-cell">
+                        <a class="yc-pedia-link" href="http://socialbusinesspedia.com/" target="_blank" rel="noopener">
+                            <img src="https://www.muhammadyunus.org/includes/themes/best/yc/img/socialbusinesspedia_logo.png" alt="">
+                            <span>Social Business Pedia</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Mobile Menu Button -->
-            <div class="flex md:hidden items-stretch">
-                <button id="mobile-menu-btn" class="bg-headerMenuBg px-6 flex items-center justify-center text-white/90 hover:text-white focus:outline-none">
-                    <i class="fas fa-bars text-3xl font-light"></i>
-                </button>
-            </div>
+        </section>
 
-            <!-- Desktop Nav Navigation -->
-            <nav class="hidden md:flex items-center space-x-6 text-[13px] font-bold text-gray-600 uppercase tracking-wide px-4">
-                <a href="#" class="hover:text-primary transition">ABOUT US</a>
-                <a href="#" class="hover:text-primary transition">SOCIAL BUSINESS</a>
-                <a href="#" class="hover:text-primary transition">VISIT PROGRAM</a>
-                <a href="#" class="hover:text-primary transition">PUBLICATION</a>
-                <a href="#" class="hover:text-primary transition">MEDIA</a>
-                <a href="#" class="hover:text-primary transition">YSBC</a>
-                <a href="#" class="hover:text-primary transition text-lg ml-2"><i class="fas fa-search"></i></a>
+        <section class="yc-search-area" hidden>
+            <div class="yc-container yc-search-inner">
+                <button class="yc-search-close" type="button" aria-label="Close search">X</button>
+                <form class="yc-search-form" action="news.html" method="get">
+                    <input type="text" name="keyword" placeholder="Type Search Keywords..." required>
+                    <button type="submit"><i class="fa fa-search"></i>Search</button>
+                </form>
+                <p class="yc-search-hint">Type keywords like Social Business, Grameen Bank etc.</p>
+            </div>
+        </section>
+
+        <section class="yc-menu-row">
+            <nav class="yc-navbar" aria-label="Primary navigation">
+                <div class="yc-container yc-navbar-container">
+                    <a class="yc-navbar-brand" href="index.html" aria-label="Yunus Centre home">
+                        <img src="https://www.muhammadyunus.org/includes/themes/best/yc/img/yunus-centre-logo.jpg" alt="Yunus Centre">
+                    </a>
+                    <button class="yc-navbar-toggler" type="button" aria-controls="yc-navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span></span>
+                    </button>
+                    <div class="yc-navbar-collapse" id="yc-navbar-menu">
+                        <ul class="yc-navbar-nav">
+                            <li class="yc-nav-item yc-megamenu-li">
+                                <button class="yc-nav-link" type="button" aria-haspopup="true" aria-expanded="false">About Us <i class="fa fa-caret-down yc-caret"></i></button>
+                                <div class="yc-dropdown-menu yc-mega">
+                                    <div class="yc-mega-grid">
+                                        <div class="yc-dropdown-section">
+                                            <h5>About Us</h5>
+                                            <ul>
+                                                <li><a href="about.html">Who we are</a></li>
+                                                <li><a href="about.html">What we do</a></li>
+                                                <li><a href="about.html">Mission and Vision</a></li>
+                                                <li><a href="about.html">Partners</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="yc-dropdown-section">
+                                            <h5>Search For</h5>
+                                            <ul>
+                                                <li><a href="news.html">One Young World 2022</a></li>
+                                                <li><a href="news.html">One Young World 2020</a></li>
+                                                <li><a href="news.html">Investors</a></li>
+                                                <li><a href="news.html">SB Volunteer</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="yc-dropdown-section">
+                                            <h5>Career</h5>
+                                            <ul>
+                                                <li><a href="about.html">Submit your CV</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="yc-dropdown-section">
+                                            <h5>Contact Us</h5>
+                                            <span class="yc-contact-line">+88 02 9023010</span>
+                                            <span class="yc-contact-line">info@yunuscentre.org</span>
+                                            <ul>
+                                                <li><a href="about.html">Contact Us</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="yc-nav-item yc-megamenu-li">
+                                <button class="yc-nav-link" type="button" aria-haspopup="true" aria-expanded="false">Social Business <i class="fa fa-caret-down yc-caret"></i></button>
+                                <div class="yc-dropdown-menu yc-mega">
+                                    <div class="yc-mega-grid">
+                                        <div class="yc-dropdown-section">
+                                            <h5>About Us</h5>
+                                            <ul>
+                                                <li><a href="index.html#social-business">About Social Business</a></li>
+                                                <li><a href="index.html#social-business">Social Business 7 principles</a></li>
+                                                <li><a href="index.html#social-business">Issues of SB</a></li>
+                                                <li><a href="index.html#faq">FAQ</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="yc-dropdown-section">
+                                            <h5>Grameen (Non Profit)</h5>
+                                            <p>The Grameen family has grown beyond Grameen Bank into multi-faceted social business initiatives.</p>
+                                        </div>
+                                        <div class="yc-dropdown-section">
+                                            <h5>Grameen (Profit)</h5>
+                                            <p>Social businesses are designed around solving problems with sustainable business discipline.</p>
+                                        </div>
+                                        <div class="yc-dropdown-section">
+                                            <h5>Joint Ventures</h5>
+                                            <p>Partnerships extend the social business model through practical collaboration.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="yc-nav-item">
+                                <button class="yc-nav-link" type="button" aria-haspopup="true" aria-expanded="false">Visit Program <i class="fa fa-caret-down yc-caret"></i></button>
+                                <ul class="yc-dropdown-menu yc-dropdown-list">
+                                    <li><a href="about.html">IMMERSION PROGRAM</a></li>
+                                    <li><a href="about.html">EXPOSURE VISIT</a></li>
+                                    <li><a href="about.html">Internship</a></li>
+                                </ul>
+                            </li>
+                            <li class="yc-nav-item">
+                                <button class="yc-nav-link" type="button" aria-haspopup="true" aria-expanded="false">Publication <i class="fa fa-caret-down yc-caret"></i></button>
+                                <ul class="yc-dropdown-menu yc-dropdown-list">
+                                    <li><a href="news.html">Books</a></li>
+                                    <li><a href="news.html">Book Review</a></li>
+                                    <li><a href="news.html">Interns' Magazine</a></li>
+                                    <li><a href="news.html">Newsletter</a></li>
+                                    <li><a href="news.html">YC Brochure</a></li>
+                                </ul>
+                            </li>
+                            <li class="yc-nav-item">
+                                <button class="yc-nav-link" type="button" aria-haspopup="true" aria-expanded="false">Media <i class="fa fa-caret-down yc-caret"></i></button>
+                                <ul class="yc-dropdown-menu yc-dropdown-list">
+                                    <li><a href="news.html">News (Highlights/News)</a></li>
+                                    <li><a href="news.html">Press Release</a></li>
+                                    <li><a href="gallery.html">Photo Gallery</a></li>
+                                    <li><a href="gallery.html">Videos</a></li>
+                                </ul>
+                            </li>
+                            <li class="yc-nav-item">
+                                <button class="yc-nav-link" type="button" aria-haspopup="true" aria-expanded="false">YSBC <i class="fa fa-caret-down yc-caret"></i></button>
+                                <ul class="yc-dropdown-menu yc-dropdown-list">
+                                    <li><a href="about.html">What is YSBC</a></li>
+                                    <li><a href="about.html">How to become a YSBC</a></li>
+                                    <li><a href="about.html">YSBC FAQ</a></li>
+                                    <li><a href="news.html">YSBC NewsFeed</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
-        </div>
-        
-        <!-- Mobile Nav Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white text-gray-800 border-t border-gray-100 px-4 pt-2 pb-4 space-y-1 shadow-lg absolute w-full left-0">
-            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-primary uppercase">About Us</a>
-            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-primary uppercase">Social Business</a>
-            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-primary uppercase">Visit Program</a>
-            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-primary uppercase">Publication</a>
-            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-primary uppercase">Media</a>
-            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-primary uppercase">YSBC</a>
-        </div>
+        </section>
+        <div class="yc-menu-spacer" aria-hidden="true"></div>
     </header>
 
     <!-- Page Header Banner (Hidden on Mobile as per preview) -->
@@ -197,9 +305,10 @@
         </div>
         
         <div class="pt-6 border-t border-blue-400/30 text-[13px] text-blue-200">
-            <p>Copyright ©2018 muhammadyunus.org.<br class="md:hidden"> All Rights Reserved. (Hit Counter)[cite: 8]</p>
+            <p>Copyright &copy;2018 muhammadyunus.org.<br class="md:hidden"> All Rights Reserved. (Hit Counter)[cite: 8]</p>
         </div>
     </footer>
+    <script src="./navbar.js"></script>
 
     <!-- Interactivity Script -->
     <script>
@@ -207,14 +316,6 @@
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
             });
-        });
-
-        // Toggle mobile navigation menu
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
         });
     </script>
 </body>
