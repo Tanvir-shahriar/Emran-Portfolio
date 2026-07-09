@@ -11,7 +11,7 @@ function LoadingScreen() {
   return (
     <div className="loading-screen" role="status" aria-live="polite">
       <div className="loading-mark" aria-hidden="true" />
-      <span>Loading Yunus Centre</span>
+      <span>Loading Emran</span>
     </div>
   );
 }

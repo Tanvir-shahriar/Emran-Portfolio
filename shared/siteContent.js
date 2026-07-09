@@ -1,324 +1,332 @@
-const fieldImage =
-  'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80';
-const communityImage =
-  'https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1200&q=80';
-const conferenceImage =
-  'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80';
-const healthcareImage =
-  'https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1200&q=80';
-const educationImage =
-  'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80';
+const asset = (file) => `/assets/doc/${file}`;
+
+const images = {
+  awardStage: asset('image7.jpg'),
+  awardRoom: asset('image2.jpg'),
+  reading: asset('image3.jpg'),
+  education: asset('image4.png'),
+  meeting: asset('image5.jpg'),
+  community: asset('image6.jpg'),
+  scholarship: asset('image1.jpg')
+};
+
+const shortBio =
+  'I am Emran Hossain, a social entrepreneur, author, and changemaker dedicated to innovation, education, and community empowerment. My work spans technology, environment, literacy, agriculture, and community upliftment.';
+
+const fullBio =
+  'Through ventures and community-led initiatives, Emran Hossain works across technology, environmental action, literacy, agriculture, and social development. Recognized as Best Youth Organizer in 2021 and Top Scout in 2018, he believes in turning vision into action through practical institutions, books, learning programs, and opportunities for young people.';
 
 export const siteContent = {
   navigation: [
     { label: 'Home', path: '/' },
-    { label: 'About Us', path: '/about' },
-    { label: 'News', path: '/news' },
+    { label: 'About', path: '/about' },
+    { label: 'Updates', path: '/news' },
     { label: 'Gallery', path: '/gallery' },
-    { label: 'Publication', path: '/news' },
-    { label: 'Media', path: '/gallery' }
+    { label: 'Books', path: '/news' },
+    { label: 'Contact', path: '/about' }
   ],
   home: {
     hero: {
-      quote: 'Human being is a fighter, human being is a creator.',
-      attribution: 'Nobel Laureate Professor Muhammad Yunus',
-      image: fieldImage
+      quote: 'Turning vision into action for people, learning, and community.',
+      attribution: 'Md. Emran Hossain',
+      image: images.awardStage
     },
     featuredArticle: {
-      title: 'Grameen Kalyan Launches Free Cervical and Breast Cancer Screening Initiative',
-      category: 'Miscellaneous',
-      date: '23rd April 2026',
-      month: 'APR',
-      day: '23',
+      title: 'Md. Emran Hossain: founder, chairman, CEO, author, and changemaker',
+      category: 'Short Bio',
+      date: '2026',
+      month: 'BIO',
+      day: '01',
       year: '2026',
-      excerpt:
-        'DHAKA, April 23, 2026: Grameen Kalyan recently launched a healthcare initiative providing 20,000 completely free cervical and clinical breast cancer screenings to underprivileged women across Bangladesh. The pilot project began on April 19, 2026 and targets married women between the ages of 30 and 60.'
+      excerpt: shortBio
     },
     newsCards: [
       {
-        title: 'বিনামূল্যে জরায়ুমুখ ও ব্রেস্ট ক্যান্সার স্ক্রিনিং কার্যক্রম শুরু করল গ্রামীণ কল্যাণ',
-        category: 'Miscellaneous',
-        image: healthcareImage
+        title: 'Best Youth Organizer Award',
+        category: 'Awards',
+        image: images.awardRoom
       },
       {
-        title: 'চক্ষুচিকিৎসা ও নার্সিং কলেজ নিয়ে পরিসর বাড়াচ্ছে গ্রামীণ হেলথ',
-        category: 'Miscellaneous',
-        image: educationImage
+        title: 'Community education and literacy initiatives',
+        category: 'Education',
+        image: images.education
       },
       {
-        title: 'Expansion of Grameen Health Care Services continues with eye care and nursing college',
-        category: 'Miscellaneous',
-        image: communityImage
+        title: 'Grassroots community engagement',
+        category: 'Community',
+        image: images.community
       },
       {
-        title: 'Registration is now open for the 16th Social Business Day in Dhaka, Bangladesh',
-        category: 'Social Business Day',
-        image: conferenceImage,
-        badge: 'Registration is open now'
+        title: 'Companies and organizations established since 2020',
+        category: 'Ventures',
+        image: images.meeting,
+        badge: 'Founder & Chairman'
       }
     ],
     quote: {
-      label: 'Quotes From Professor Yunus',
+      label: 'Philosophy',
       text:
-        'I wanted to do something to help just one human being, hoping it would serve as a seed that could grow into something larger.'
+        'Innovation becomes meaningful when it educates, empowers, and creates practical opportunity for communities.'
     },
     programs: [
       {
-        title: 'Immersion Program',
+        title: 'Initiative for Education',
         text:
-          'A compact learning visit for people who want first-hand exposure to social business institutions and Grameen ideas.'
+          'Learning programs, public library work, science clubs, and school initiatives designed to expand access to knowledge.'
       },
       {
-        title: 'Exposure Visit',
+        title: 'Initiative for Environment',
         text:
-          'A guided program for groups, universities, organizations, and practitioners exploring the social business ecosystem.'
+          'Community awareness and action focused on greener habits, local responsibility, and sustainable development.'
       },
       {
-        title: 'Yunus Centre Internship',
+        title: 'Initiative for Disabilities',
         text:
-          'A learning opportunity for students and young professionals interested in social business, communication, and research.'
+          'Inclusive community support that keeps dignity, participation, and practical help at the center.'
       }
     ],
     aboutTeasers: [
       {
-        title: 'Who we are',
+        title: 'Founder, Chairman and Chief Executive Officer',
         text:
-          'Yunus Centre is a global resource hub for social business, building relationships among institutions, researchers, and changemakers.'
+          'Emran has established and led companies and organizations across technology, agriculture, publishing, education, and social impact.'
       },
       {
-        title: 'What we do',
+        title: 'Author and cultural contributor',
         text:
-          'The Centre promotes Professor Yunus\' philosophy through events, publications, social media, and programs across Bangladesh and abroad.'
+          'His books include অঙ্কুর, সপ্তসংঘ, and ঝিনাইদহের মরমী কবি বলরাম শর্মা ও তাঁর কালজয়ী সাধন সংগীত.'
       }
     ],
     socialBusiness: {
-      heading: 'What is social business?',
+      heading: 'Companies, nonprofits, and initiatives',
       text:
-        'A social business is a non-loss, non-dividend company created to solve a social problem. Investors may recover their investment, but the company exists for people and purpose rather than personal profit.',
+        'Since 2020, Emran has built a portfolio that combines enterprise with public-minded work, including Suborno IT, Emran Industries Limited, Emran Dairy Farm, libraries, clubs, publications, and education initiatives.',
       principles: [
-        'Business objective will be to overcome poverty, or one or more problems which threaten people and society.',
-        'Financial and economic sustainability.',
-        'Investors get back their investment amount only.',
-        'When investment amount is paid back, company profit stays with the company for expansion and improvement.',
-        'Environmentally conscious.',
-        'Workforce gets market wage with better working conditions.',
-        'Do it with joy.'
+        'Emran Industries Limited',
+        'Emran Dairy Farm',
+        'Suborno IT',
+        'Md. Emran Hossain Public Library',
+        'Udvabon Science & Technology Club',
+        'Soptosongho Jubo Poribar',
+        "Jhenaidah Writers' Club and Jhenaidah Publications"
       ]
     },
     worldMedia: [
       {
-        title: 'Grameen Kalyan Launches Free Cervical and Breast Cancer Screening Initiative',
-        date: '23rd April 2026',
-        image: healthcareImage
+        title: 'শ্রেষ্ঠ যুব সংগঠক সম্মাননা - ২০২১',
+        date: '2021',
+        image: images.awardRoom
       },
       {
-        title: 'বিনামূল্যে জরায়ুমুখ ও ব্রেস্ট ক্যান্সার স্ক্রিনিং কার্যক্রম শুরু করল গ্রামীণ কল্যাণ',
-        date: '23rd April 2026',
-        image: healthcareImage
+        title: 'শ্রেষ্ঠ স্কাউট - ২০১৮',
+        date: '2018',
+        image: images.awardStage
       },
       {
-        title: 'চক্ষুচিকিৎসা ও নার্সিং কলেজ নিয়ে পরিসর বাড়াচ্ছে গ্রামীণ হেলথ',
-        date: '22nd April 2026',
-        image: educationImage
+        title: 'সেরা পাঠক - ২০২১',
+        date: '2021',
+        image: images.reading
       }
     ],
     publications: [
-      { title: 'FAQ ON YSBC', type: 'Guide' },
-      { title: 'YC BROCHURE', type: 'Brochure' },
-      { title: 'SPOT LIGHT', type: 'Magazine' },
-      { title: 'Yunus Centre Interns Magazine #12', type: 'Magazine' }
+      { title: 'অঙ্কুর', type: 'Book' },
+      { title: 'সপ্তসংঘ', type: 'Book' },
+      { title: 'ঝিনাইদহের মরমী কবি বলরাম শর্মা ও তাঁর কালজয়ী সাধন সংগীত', type: 'Book' },
+      { title: 'Suborno IT and community initiatives', type: 'Profile' }
     ],
     media: [
       {
-        title: '"Artificial intelligence: a blessing or a curse?"',
-        label: 'Video',
-        image: conferenceImage
+        title: 'Awards and recognition moments',
+        label: 'Gallery',
+        image: images.awardStage
       },
       {
-        title: 'Global Social Business Summit highlights',
+        title: 'Education, community, and field initiatives',
         label: 'Gallery',
-        image: communityImage
+        image: images.community
       }
     ],
     social: {
       facebook:
-        'Yunus Centre continues to share updates from social business programs, publications, and international events.',
+        "Follow updates about Emran Hossain's initiatives, books, education work, and community programs.",
       twitter:
-        'Follow the latest social business conversations, event notes, and Professor Yunus updates.'
+        'Track announcements, opportunities, and project notes from the Emran platform.'
     }
   },
   about: {
-    title: 'Who we are',
-    breadcrumb: 'Home / All Pages / Who we are',
-    heroImage: fieldImage,
+    title: 'About',
+    breadcrumb: 'Home / About',
+    heroImage: images.awardStage,
     quickNews: [
-      'Grameen Kalyan Launches Free Cervical and Breast Cancer Screening Initiative',
-      'বিনামূল্যে জরায়ুমুখ ও ব্রেস্ট ক্যান্সার স্ক্রিনিং কার্যক্রম শুরু করল গ্রামীণ কল্যাণ',
-      'চক্ষুচিকিৎসা ও নার্সিং কলেজ নিয়ে পরিসর বাড়াচ্ছে গ্রামীণ হেলথ',
-      'Expansion of Grameen Health Care Services continues with eye care and nursing college'
+      'Scholarship Apply',
+      'Career Form',
+      'Invest Or Donate',
+      'Survey'
     ],
     article: {
-      title: 'Global Hub for Social Business',
-      date: 'About 14th December 2019',
+      title: 'Md. Emran Hossain',
+      date: 'Founder, Chairman and Chief Executive Officer',
       sections: [
         {
-          heading: 'Global Hub for Social Business',
-          body:
-            'Since October 2006, when Professor Yunus and Grameen Bank jointly received the Nobel Peace Prize, local and international interest in Professor Yunus\' work has continuously increased. To address this growing attention, an organization aimed at promoting and disseminating Professor Yunus\' philosophy was created as the Yunus Secretariat. In July 2008, the Yunus Secretariat was renamed the Yunus Centre.'
+          heading: 'Short Bio',
+          body: shortBio
         },
         {
-          heading: 'What is Grameen social business?',
+          heading: 'Full Descriptive Bio',
+          body: fullBio
+        },
+        {
+          heading: 'Philosophy',
           body:
-            'Professor Yunus has long promoted the creation of Grameen social businesses, which are non-loss, non-dividend companies dedicated entirely to achieving a social goal. The investor gets the investment money back over time, but never receives dividends beyond that amount.'
+            'The work is guided by a simple belief: ideas should become institutions, and institutions should create learning, dignity, opportunity, and measurable community value.'
+        },
+        {
+          heading: 'Companies',
+          body:
+            'Established since 2020: Emran Industries Limited, Emran Dairy Farm, and Suborno IT.'
+        },
+        {
+          heading: 'Non-profit and community organizations',
+          body:
+            "Md. Emran Hossain Public Library, Udvabon Science & Technology Club, Next Wave, Soptosongho Jubo Poribar, Jhenaidah Writers' Club, and Jhenaidah Publications."
+        },
+        {
+          heading: 'Initiatives',
+          body:
+            'Current focus areas include disability inclusion, environmental action, education, Green Life International School, Kids Wave, and Suborno IT.'
         }
       ]
     },
     related: [
       {
-        title: 'চক্ষুচিকিৎসা ও নার্সিং কলেজ নিয়ে পরিসর বাড়াচ্ছে গ্রামীণ হেলথ',
-        date: '22nd April 2026',
+        title: 'শ্রেষ্ঠ যুব সংগঠক সম্মাননা - ২০২১',
+        date: '2021',
         excerpt:
-          'গ্রামীণ হেলথ কেয়ার সার্ভিসেস সম্প্রতি ভিশন ২০৩০ রোডম্যাপের অধীনে নতুন উদ্যোগ গ্রহণ করেছে।',
-        image: educationImage
+          'Recognition from the Department of Youth Development, Jhenaidah, under the Ministry of Youth and Sports.',
+        image: images.awardRoom
       },
       {
-        title: 'Expansion of Grameen Health Care Services continues with eye care and nursing college',
-        date: '22nd April 2026',
+        title: 'শ্রেষ্ঠ স্কাউট - ২০১৮',
+        date: '2018',
         excerpt:
-          'Grameen Health Care Services Limited is accelerating its growth under the Vision 2030 roadmap.',
-        image: communityImage
+          'Recognition for scouting leadership and discipline.',
+        image: images.awardStage
       },
       {
-        title: 'Registration is now open for the 16th Social Business Day in Dhaka, Bangladesh',
-        date: '16th April 2026',
+        title: 'শ্রেষ্ঠ শিক্ষার্থী - ২০১৮',
+        date: '2018',
         excerpt:
-          'The annual Social Business Day will gather practitioners, researchers, entrepreneurs, and students in Dhaka.',
-        image: conferenceImage
+          'Student recognition connected to learning, leadership, and academic engagement.',
+        image: images.reading
       },
       {
-        title: 'Professor Yunus emphasizes digital healthcare access during visit to Grameen Health Tech Office',
-        date: '11th April 2026',
+        title: 'সেরা পাঠক - ২০২১',
+        date: '2021',
         excerpt:
-          'Professor Yunus highlighted the importance of accessible digital healthcare and people-centered innovation.',
-        image: healthcareImage
+          'A reading award reflecting a continuing commitment to books, literacy, and public learning.',
+        image: images.reading
       }
     ]
   },
   news: [
     {
-      title: 'Grameen Kalyan Launches Free Cervical and Breast Cancer Screening Initiative',
-      category: 'Miscellaneous',
-      date: '23rd April 2026',
+      title: 'Scholarship Apply',
+      category: 'Opportunity',
+      date: '2026',
       source: 'YC',
       excerpt:
-        'DHAKA, April 23, 2026: Grameen Kalyan recently launched a healthcare initiative providing 20,000 completely free cervical and clinical breast cancer screenings to underprivileged women across Bangladesh.',
-      image: healthcareImage,
+        'A scholarship application pathway will be available for students and young people connected to education and community development programs.',
+      image: images.scholarship,
       featured: true,
       order: 1
     },
     {
-      title: 'বিনামূল্যে জরায়ুমুখ ও ব্রেস্ট ক্যান্সার স্ক্রিনিং কার্যক্রম শুরু করল গ্রামীণ কল্যাণ',
-      category: 'Miscellaneous',
-      date: '23rd April 2026',
+      title: 'Career Form',
+      category: 'Career',
+      date: '2026',
       source: 'YC',
       excerpt:
-        'ঢাকা, ২৩ এপ্রিল ২০২৬: গ্রামীণ কল্যাণ সম্প্রতি সুবিধাবঞ্চিত নারীদের জন্য সম্পূর্ণ বিনামূল্যে স্ক্রিনিং কার্যক্রম শুরু করেছে।',
-      language: 'bn',
+        'The career form will collect interest from people who want to contribute to technology, education, environment, publications, and community initiatives.',
+      image: images.meeting,
       order: 2
     },
     {
-      title: 'চক্ষুচিকিৎসা ও নার্সিং কলেজ নিয়ে পরিসর বাড়াচ্ছে গ্রামীণ হেলথ',
-      category: 'Miscellaneous',
-      date: '22nd April 2026',
+      title: 'Invest Or Donate',
+      category: 'Support',
+      date: '2026',
       source: 'YC',
       excerpt:
-        'গ্রামীণ হেলথ কেয়ার সার্ভিসেস লিমিটেড ভিশন ২০৩০ রোডম্যাপের অধীনে স্বাস্থ্যসেবার পরিসর বাড়াচ্ছে।',
-      language: 'bn',
-      image: educationImage,
+        'Support pathways will be prepared for people and organizations who want to invest in or donate to education, inclusion, environment, and literacy initiatives.',
+      image: images.community,
       order: 3
     },
     {
-      title: 'Expansion of Grameen Health Care Services continues with eye care and nursing college',
-      category: 'Miscellaneous',
-      date: '22nd April 2026',
+      title: 'Survey',
+      category: 'Feedback',
+      date: '2026',
       source: 'YC',
       excerpt:
-        'Grameen Health Care Services Limited is accelerating its growth under the comprehensive Vision 2030 roadmap, launching women-led Green Vision Centers and expanding medical education.',
-      image: educationImage,
+        'A public survey is available to collect feedback, needs, and community insight for future programs.',
+      image: images.education,
       order: 4
     },
     {
-      title: 'Registration is now open for the 16th Social Business Day in Dhaka, Bangladesh',
-      category: 'Social Business Day',
-      date: '16th April 2026',
+      title: 'Books by Emran Hossain',
+      category: 'Books',
+      date: '2026',
       source: 'YC',
       excerpt:
-        'Registration is now open for the 16th Social Business Day, bringing the global social business community together in Dhaka.',
-      image: conferenceImage,
+        'Featured books include অঙ্কুর, সপ্তসংঘ, and ঝিনাইদহের মরমী কবি বলরাম শর্মা ও তাঁর কালজয়ী সাধন সংগীত.',
+      image: images.reading,
       order: 5
-    },
-    {
-      title: 'Professor Yunus emphasizes digital healthcare access during visit to Grameen Health Tech Office',
-      category: 'Healthcare',
-      date: '11th April 2026',
-      source: 'YC',
-      excerpt:
-        'Professor Yunus emphasized digital healthcare access and new service models during a recent visit to Grameen Health Tech Office.',
-      image: communityImage,
-      order: 6
-    },
-    {
-      title: '15th Social Business Day 2025 to be held on June 27-28',
-      category: 'Social Business Day',
-      date: '4th April 2026',
-      source: 'YC',
-      excerpt:
-        'Social Business Day 2025 will bring together partners, academics, and social business builders for two days of exchange.',
-      image: conferenceImage,
-      order: 7
     }
   ],
   gallery: [
     {
-      title: 'Japanese delegation from the YSBC at Kyushu University',
-      image: conferenceImage,
-      alt: 'Delegation visit'
+      title: 'Award recognition ceremony',
+      image: images.awardStage,
+      alt: 'Emran Hossain receiving recognition on stage'
     },
     {
-      title: 'Home Page Banner',
-      image: communityImage,
-      alt: 'Community event banner'
+      title: 'Science and technology award program',
+      image: images.awardRoom,
+      alt: 'Award handover at a science and technology program'
     },
     {
-      title: 'Summer of Purpose 2020',
-      image: educationImage,
-      alt: 'Students and participants at a program'
+      title: 'Reading and authorship',
+      image: images.reading,
+      alt: 'Emran Hossain reading beside a stack of books'
     },
     {
-      title: 'Social Business Day in Dhaka',
-      image: conferenceImage,
-      alt: 'Conference hall'
+      title: 'Education support session',
+      image: images.education,
+      alt: 'Emran Hossain helping a child write'
     },
     {
-      title: 'Yunus Centre Internship Session',
-      image: educationImage,
-      alt: 'Student learning session'
+      title: 'Community planning meeting',
+      image: images.meeting,
+      alt: 'Community meeting with local participants'
     },
     {
-      title: 'Community Health Initiative',
-      image: healthcareImage,
-      alt: 'Healthcare outreach'
+      title: 'Grassroots community visit',
+      image: images.community,
+      alt: 'Community visit with families and children'
+    },
+    {
+      title: 'Scholarship and public support',
+      image: images.scholarship,
+      alt: 'Scholarship support handover'
     }
   ],
   footer: {
     description:
-      'Yunus Centre is a global hub for social business, research, learning, and initiatives inspired by Nobel Laureate Professor Muhammad Yunus.',
-    quickLinks: ['About Us', 'Social Business', 'Visit Program', 'Publication', 'Media'],
-    websiteLinks: ['Social Business Pedia', 'Yunus Social Business Centres', 'YSBC Web Lecture Series'],
+      "Emran is the platform for Emran Hossain's ventures, books, initiatives, opportunities, and community work.",
+    quickLinks: ['About', 'Books', 'Companies', 'Initiatives', 'Contact'],
+    websiteLinks: ['Suborno IT', 'Scholarship Apply', 'Career Form', 'Invest Or Donate', 'Survey'],
     contact: {
-      address: 'Dhaka, Bangladesh',
-      email: 'info@yunuscentre.org',
-      phone: '+880 2 913 6058'
+      address: 'Jhenaidah, Bangladesh',
+      email: 'info@emran.bd',
+      phone: 'Phone available on request'
     }
   }
 };

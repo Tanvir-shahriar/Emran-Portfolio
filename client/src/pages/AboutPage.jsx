@@ -25,7 +25,7 @@ export default function AboutPage({ content }) {
 
           <div className="faq-tile">
             <span>FAQ</span>
-            <h2>Questions and Answers on Yunus Social Business Centres</h2>
+            <h2>Scholarship, career, invest or donate, and survey links</h2>
             <a href="/about">View Details</a>
           </div>
 
@@ -33,8 +33,8 @@ export default function AboutPage({ content }) {
             <h2>Latest Book</h2>
             <div className="book-cover">
               <BookOpen size={28} aria-hidden="true" />
-              <strong>A World of Three Zeros</strong>
-              <span>Muhammad Yunus</span>
+              <strong>অঙ্কুর</strong>
+              <span>Md. Emran Hossain</span>
             </div>
           </div>
         </aside>
@@ -60,7 +60,7 @@ export default function AboutPage({ content }) {
                 article={{
                   ...article,
                   category: 'Related',
-                  source: 'YC'
+                  source: 'Emran'
                 }}
                 compact
               />

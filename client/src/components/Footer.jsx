@@ -7,7 +7,7 @@ export default function Footer({ footer, navigation }) {
         <div className="footer-brand">
           <div className="footer-logo">
             <Globe2 size={30} aria-hidden="true" />
-            <span>Yunus Centre</span>
+            <span>Emran</span>
           </div>
           <p>{footer.description}</p>
         </div>
@@ -50,7 +50,7 @@ export default function Footer({ footer, navigation }) {
           </p>
         </address>
       </div>
-      <p className="footer-bottom">Copyright 2026 Yunus Centre. All rights reserved.</p>
+      <p className="footer-bottom">Copyright &copy; 2026 Zenovix. All rights reserved.</p>
     </footer>
   );
 }

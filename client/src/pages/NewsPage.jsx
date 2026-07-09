@@ -23,18 +23,18 @@ export default function NewsPage({ content }) {
 
   return (
     <>
-      <PageHero title="All News" breadcrumb="Home / All News" tone="dark" />
+      <PageHero title="Updates" breadcrumb="Home / Updates" tone="dark" />
 
       <section className="news-page section-shell">
         <div className="news-main-column">
           <label className="search-box">
             <Search size={18} aria-hidden="true" />
-            <span className="sr-only">Search news</span>
+            <span className="sr-only">Search updates</span>
             <input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               type="search"
-              placeholder="Search news"
+              placeholder="Search updates"
             />
           </label>
 
@@ -47,7 +47,7 @@ export default function NewsPage({ content }) {
 
         <aside className="news-sidebar">
           <div className="sidebar-block">
-            <h2>Recent News</h2>
+            <h2>Recent Updates</h2>
             {news.slice(0, 4).map((article) => (
               <a key={article.title} href="/news">
                 {article.title}
@@ -57,15 +57,15 @@ export default function NewsPage({ content }) {
 
           <div className="faq-tile compact">
             <span>FAQ</span>
-            <h2>FAQ ON YSBC</h2>
+            <h2>Opportunities</h2>
             <a href="/about">View Details</a>
           </div>
 
           <div className="book-tile">
             <h2>Latest Book</h2>
             <div className="book-cover">
-              <strong>A World of Three Zeros</strong>
-              <span>Muhammad Yunus</span>
+              <strong>অঙ্কুর</strong>
+              <span>Md. Emran Hossain</span>
             </div>
           </div>
 

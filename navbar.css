@@ -256,8 +256,14 @@
 .yc-navbar-brand {
     display: flex;
     align-items: center;
+    gap: 9px;
     flex: 0 0 auto;
     min-height: 70px;
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: none;
 }
 
 .yc-navbar-brand img {
@@ -266,6 +272,19 @@
     margin-left: -30px;
     max-width: 190px;
     object-fit: contain;
+}
+
+.yc-brand-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 26px;
+}
+
+.yc-brand-text {
+    color: #ffffff;
+    white-space: nowrap;
 }
 
 .yc-navbar-toggler {
@@ -525,6 +544,7 @@
     .yc-navbar-brand {
         min-height: 70px;
         padding-left: 15px;
+        font-size: 24px;
     }
 
     .yc-navbar-brand img {

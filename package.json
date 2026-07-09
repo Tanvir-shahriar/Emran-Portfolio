@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "MERN stack version of the Yunus Centre portfolio website.",
+  "description": "MERN stack version of the Emran portfolio website.",
   "workspaces": [
     "client",
     "server"

@@ -87,9 +87,9 @@ export default function HomePage({ content }) {
 
       <section className="section-shell">
         <SectionHeading
-          eyebrow="Visit Programs"
-          title="Learn social business where it happens"
-          text="Structured programs for visitors, students, researchers, and practitioners."
+          eyebrow="Initiatives"
+          title="Education, environment, and community programs"
+          text="Initial focus areas from the website brief, shaped into practical sections for visitors."
         />
         <div className="program-grid">
           {home.programs.map((program, index) => (
@@ -101,8 +101,8 @@ export default function HomePage({ content }) {
       <section className="about-band">
         <div className="section-shell about-grid">
           <div>
-            <span className="content-label">About Us</span>
-            <h2>Global Hub for Social Business</h2>
+            <span className="content-label">About</span>
+            <h2>Md. Emran Hossain</h2>
             <Link className="button-primary" to="/about">
               Who we are <ArrowRight size={16} aria-hidden="true" />
             </Link>
@@ -118,15 +118,15 @@ export default function HomePage({ content }) {
         </div>
       </section>
 
-      <section className="section-shell social-business" id="social-business">
-        <div className="social-business-intro">
+      <section className="section-shell ventures-section" id="ventures">
+        <div className="ventures-intro">
           <Leaf size={34} aria-hidden="true" />
-          <span className="content-label">Social Business</span>
+          <span className="content-label">Portfolio</span>
           <h2>{home.socialBusiness.heading}</h2>
           <p>{home.socialBusiness.text}</p>
         </div>
         <div className="principles-panel">
-          <h3>7 Principles of Social Business</h3>
+          <h3>Core organizations</h3>
           <ol>
             {home.socialBusiness.principles.map((principle) => (
               <li key={principle}>{principle}</li>
@@ -137,8 +137,8 @@ export default function HomePage({ content }) {
 
       <section className="section-shell">
         <SectionHeading
-          eyebrow="World Media"
-          title="News published around the world media"
+          eyebrow="Recognition"
+          title="Awards and milestones"
         />
         <div className="media-news-grid">
           {home.worldMedia.map((article) => (
@@ -150,7 +150,7 @@ export default function HomePage({ content }) {
       <section className="faq-band">
         <div>
           <span>FAQ</span>
-          <h2>Who will invest in social business? Why?</h2>
+          <h2>Scholarship, career, invest/donate, and survey pathways</h2>
           <Link to="/about">
             View Details <ArrowRight size={16} aria-hidden="true" />
           </Link>
@@ -158,7 +158,7 @@ export default function HomePage({ content }) {
       </section>
 
       <section className="publications section-shell">
-        <SectionHeading eyebrow="Publications" title="Latest reading from Yunus Centre" />
+        <SectionHeading eyebrow="Books" title="Published and featured books" />
         <div className="publication-grid">
           {home.publications.map((item) => (
             <PublicationCard key={item.title} item={item} />

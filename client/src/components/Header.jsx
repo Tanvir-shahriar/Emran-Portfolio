@@ -1,61 +1,53 @@
 import { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-const logoUrl = 'https://www.muhammadyunus.org/includes/themes/best/yc/img/yunus-centre-logo.jpg';
-const pediaLogoUrl = 'https://www.muhammadyunus.org/includes/themes/best/yc/img/socialbusinesspedia_logo.png';
-
 const navGroups = [
   {
-    label: 'About Us',
+    label: 'About',
     mega: true,
     sections: [
-      { title: 'About Us', links: ['Who we are', 'What we do', 'Mission and Vision', 'Partners'].map((label) => ({ label, to: '/about' })) },
-      { title: 'Search For', links: ['One Young World 2022', 'One Young World 2020', 'Investors', 'SB Volunteer'].map((label) => ({ label, to: '/news' })) },
-      { title: 'Career', links: [{ label: 'Submit your CV', to: '/about' }] },
-      { title: 'Contact Us', contact: ['+88 02 9023010', 'info@yunuscentre.org'], links: [{ label: 'Contact Us', to: '/about' }] },
+      { title: 'Profile', links: ['Short Bio', 'Full Bio', 'Philosophy', 'Awards'].map((label) => ({ label, to: '/about' })) },
+      { title: 'Roles', links: ['Founder', 'Chairman', 'Chief Executive Officer', 'Author'].map((label) => ({ label, to: '/about' })) },
+      { title: 'Contact', contact: ['info@emran.bd', 'Jhenaidah, Bangladesh'], links: [{ label: 'Contact', to: '/about' }] },
+      { title: 'Recognition', links: ['Best Youth Organizer 2021', 'Top Scout 2018', 'Best Student 2018', 'Best Reader 2021'].map((label) => ({ label, to: '/about' })) },
     ],
   },
   {
-    label: 'Social Business',
+    label: 'Ventures',
     mega: true,
     sections: [
       {
-        title: 'About Us',
+        title: 'Companies',
         links: [
-          { label: 'About Social Business', to: '/#social-business' },
-          { label: 'Social Business 7 principles', to: '/#social-business' },
-          { label: 'Issues of SB', to: '/#social-business' },
-          { label: 'FAQ', to: '/#faq' },
+          { label: 'Emran Industries Limited', to: '/#ventures' },
+          { label: 'Emran Dairy Farm', to: '/#ventures' },
+          { label: 'Suborno IT', to: '/#ventures' },
         ],
       },
-      { title: 'Grameen (Non Profit)', text: 'The Grameen family has grown beyond Grameen Bank into multi-faceted social business initiatives.' },
-      { title: 'Grameen (Profit)', text: 'Social businesses are designed around solving problems with sustainable business discipline.' },
-      { title: 'Joint Ventures', text: 'Partnerships extend the social business model through practical collaboration.' },
+      { title: 'Non-profit', text: "Public library, science club, youth family, writers' club, and publication work." },
+      { title: 'Initiatives', text: 'Education, environment, disability inclusion, Kids Wave, and Green Life International School.' },
+      { title: 'Suborno', text: 'Technology and digital work through Suborno IT and suborno.com.bd.' },
     ],
   },
   {
-    label: 'Visit Program',
-    links: ['IMMERSION PROGRAM', 'EXPOSURE VISIT', 'Internship'].map((label) => ({ label, to: '/about' })),
+    label: 'Books',
+    links: ['Onkur', 'Soptosongho', 'Balaram Sharma Book'].map((label) => ({ label, to: '/news' })),
   },
   {
-    label: 'Publication',
-    links: ['Books', 'Book Review', "Interns' Magazine", 'Newsletter', 'YC Brochure'].map((label) => ({ label, to: '/news' })),
+    label: 'Opportunities',
+    links: ['Scholarship Apply', 'Career Form', 'Invest Or Donate', 'Survey'].map((label) => ({ label, to: '/news' })),
   },
   {
     label: 'Media',
     links: [
-      { label: 'News (Highlights/News)', to: '/news' },
-      { label: 'Press Release', to: '/news' },
-      { label: 'Photo Gallery', to: '/gallery' },
+      { label: 'Updates', to: '/news' },
+      { label: 'Gallery', to: '/gallery' },
       { label: 'Videos', to: '/gallery' },
     ],
   },
   {
-    label: 'YSBC',
-    links: ['What is YSBC', 'How to become a YSBC', 'YSBC FAQ', 'YSBC NewsFeed'].map((label, index) => ({
-      label,
-      to: index === 3 ? '/news' : '/about',
-    })),
+    label: 'Contact',
+    links: ['Phone', 'E-mail', 'LinkedIn', 'X', 'Facebook', 'Instagram'].map((label) => ({ label, to: '/about' })),
   },
 ];
 
@@ -121,15 +113,15 @@ export default function Header() {
       <section className="yc-top-area">
         <div className="yc-container yc-top-grid">
           <div className="yc-top-left">
-            <a href="mailto:info@yunuscentre.org" className="yc-top-email">
+            <a href="mailto:info@emran.bd" className="yc-top-email">
               <i className="fa fa-envelope" aria-hidden="true" />
-              <span>info@yunuscentre.org</span>
+              <span>info@emran.bd</span>
             </a>
             <ul className="yc-social-list" aria-label="Social links">
-              <li><a href="https://www.facebook.com/YunusCentre" aria-label="Facebook"><i className="fab fa-facebook-f" /></a></li>
-              <li><a href="https://www.twitter.com/YunusCentre" aria-label="Twitter"><i className="fab fa-twitter" /></a></li>
+              <li><a href="#" aria-label="Facebook"><i className="fab fa-facebook-f" /></a></li>
+              <li><a href="#" aria-label="Twitter"><i className="fab fa-twitter" /></a></li>
               <li><a href="https://www.linkedin.com" aria-label="LinkedIn"><i className="fab fa-linkedin-in" /></a></li>
-              <li><a href="https://www.pinterest.com/YunusCentre" aria-label="Pinterest"><i className="fab fa-pinterest" /></a></li>
+              <li><a href="#" aria-label="Pinterest"><i className="fab fa-pinterest" /></a></li>
               <li className="yc-search-cell">
                 <button className="yc-search-trigger" type="button" aria-label="Open search" aria-expanded={searchOpen} onClick={() => setSearchOpen(true)}>
                   <i className="fa fa-search" aria-hidden="true" />
@@ -139,9 +131,9 @@ export default function Header() {
           </div>
           <div className="yc-top-right">
             <div className="yc-pedia-cell">
-              <a className="yc-pedia-link" href="http://socialbusinesspedia.com/" target="_blank" rel="noreferrer">
-                <img src={pediaLogoUrl} alt="" />
-                <span>Social Business Pedia</span>
+              <a className="yc-pedia-link" href="https://www.suborno.com.bd" target="_blank" rel="noreferrer">
+                <i className="fab fa-envira" aria-hidden="true" />
+                <span>Suborno</span>
               </a>
             </div>
           </div>
@@ -155,15 +147,16 @@ export default function Header() {
             <input type="text" name="keyword" placeholder="Type Search Keywords..." required />
             <button type="submit"><i className="fa fa-search" aria-hidden="true" />Search</button>
           </form>
-          <p className="yc-search-hint">Type keywords like Social Business, Grameen Bank etc.</p>
+          <p className="yc-search-hint">Type keywords like books, awards, scholarship, career, Suborno etc.</p>
         </div>
       </section>
 
       <section className={`yc-menu-row${isSticky ? ' is-sticky' : ''}`} ref={menuRowRef}>
         <nav className="yc-navbar" aria-label="Primary navigation">
           <div className="yc-container yc-navbar-container">
-            <NavLink className="yc-navbar-brand" to="/" onClick={closeMenu} aria-label="Yunus Centre home">
-              <img src={logoUrl} alt="Yunus Centre" />
+            <NavLink className="yc-navbar-brand" to="/" onClick={closeMenu} aria-label="Emran home">
+              <span className="yc-brand-mark"><i className="fab fa-envira" aria-hidden="true" /></span>
+              <span className="yc-brand-text">Emran</span>
             </NavLink>
             <button className="yc-navbar-toggler" type="button" aria-controls="yc-navbar-menu" aria-expanded={menuOpen} aria-label="Toggle navigation" onClick={() => setMenuOpen((open) => !open)}>
               <span />
