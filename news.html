@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All News - Yunus Centre</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0056b3',
+                        headerBlue: '#36689d',
+                        headerMenuBg: '#457ab4',
+                        footerBlue: '#3b659c',
+                        faqTeal: '#10738e',
+                        pageBg: '#ffffff',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-pageBg text-gray-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- Top Social Bar (Mobile Layout) -->
+    <div class="flex justify-between items-center px-4 py-2 bg-gray-50 border-b border-gray-200">
+        <div class="flex items-center gap-3">
+            <a href="#" class="w-6 h-6 rounded-full bg-[#3b5998] text-white flex items-center justify-center text-xs"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="w-6 h-6 rounded-full bg-[#00aced] text-white flex items-center justify-center text-xs"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="w-6 h-6 rounded-full bg-[#007bb6] text-white flex items-center justify-center text-xs"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="w-6 h-6 rounded-full bg-[#cb2027] text-white flex items-center justify-center text-xs"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="text-headerBlue ml-1 text-lg"><i class="fas fa-search"></i></a>
+        </div>
+        <a href="#" class="text-[#009a5a] text-xl"><i class="fab fa-envira"></i></a>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="bg-headerBlue text-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-stretch h-16">
+            <div class="flex-shrink-0 flex items-center px-4">
+                <div class="text-2xl font-semibold flex items-center gap-2 tracking-wide">
+                    <i class="fab fa-pagelines text-white/80 text-3xl"></i> Yunus Centre[cite: 6]
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="flex md:hidden">
+                <button id="mobile-menu-btn" class="bg-headerMenuBg px-5 flex items-center justify-center text-white/90 hover:text-white focus:outline-none">
+                    <i class="fas fa-bars text-3xl font-light"></i>
+                </button>
+            </div>
+
+            <!-- Desktop Nav Navigation -->
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold uppercase px-4">
+                <a href="#" class="hover:text-gray-200 transition">About Us</a>
+                <a href="#" class="hover:text-gray-200 transition">Social Business</a>
+                <a href="#" class="hover:text-gray-200 transition">Visit Program</a>
+                <a href="#" class="hover:text-gray-200 transition">Publication</a>
+                <a href="#" class="hover:text-gray-200 transition">Media</a>
+            </nav>
+        </div>
+        
+        <!-- Mobile Nav Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white text-gray-800 border-t border-gray-100 px-4 pt-2 pb-4 space-y-1 shadow-lg absolute w-full left-0">
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-primary uppercase">About Us</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-primary uppercase">Social Business</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-primary uppercase">Visit Program</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-primary uppercase">Publication</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-primary uppercase">Media</a>
+        </div>
+    </header>
+
+    <!-- Page Header Banner (Dark Green Geometric) -->
+    <section class="relative bg-[#1a382a] py-12 px-5 overflow-hidden">
+        <!-- Abstract CSS Polygons to simulate the background -->
+        <div class="absolute inset-0 opacity-40">
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#1a382a] to-[#0d2116]"></div>
+            <div class="absolute -top-10 -left-10 w-64 h-64 bg-[#234b38] transform rotate-45"></div>
+            <div class="absolute top-20 right-0 w-96 h-96 bg-[#11291d] transform -rotate-12"></div>
+            <div class="absolute bottom-0 left-20 w-72 h-72 bg-[#1b3d2c] transform rotate-12"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto">
+            <h1 class="text-4xl text-white mb-4">All News[cite: 6]</h1>
+            <div class="text-base text-gray-300 tracking-wide font-medium">
+                <a href="#" class="hover:text-white">Home</a> <span class="mx-1 text-gray-400">/</span> 
+                <span class="text-white">All News[cite: 6]</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Flow (Mobile First) -->
+    <section class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 py-2">
+        
+        <!-- News Feed (Main Column) -->
+        <div class="lg:col-span-2 flex flex-col">
+            
+            <!-- Article 1 -->
+            <article class="p-5 border-b border-gray-200">
+                <h2 class="text-[19px] font-bold text-gray-900 leading-snug mb-3">
+                    Grameen Kalyan Launches Free Cervical and Breast Cancer Screening Initiative[cite: 6]
+                </h2>
+                <div class="flex items-center gap-3 text-xs font-semibold text-gray-500 mb-4">
+                    <span class="text-primary">Miscellaneous[cite: 6]</span>
+                    <span class="text-gray-400">23rd April 2026[cite: 6]</span>
+                    <span class="bg-gray-100 px-2 py-0.5 rounded text-gray-600 font-bold border border-gray-200">YC[cite: 6]</span>
+                </div>
+                <img src="https://placehold.co/600x400/eeeeee/999999?text=Lab+Staff" alt="News Image" class="w-full h-auto object-cover mb-4">
+                <p class="text-[15px] text-gray-700 leading-relaxed mb-1">
+                    DHAKA, April 23, 2020: Grameen Kalyan recently launched a healthcare initiative providing 20,000 completely free cervical and clinical breast cancer screenings to underprivileged women across Bangladesh. The pilot project, which began on April 19, 2026, specif...[cite: 6]
+                </p>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="p-5 border-b border-gray-200">
+                <h2 class="text-[19px] font-bold text-gray-900 leading-snug mb-3 font-serif">
+                    বিনামূল্যে জরায়ুমুখ ও ব্রেস্ট ক্যান্সার স্ক্রিনিং কার্যক্রম শুরু করল গ্রামীণ কল্যাণ[cite: 6]
+                </h2>
+                <div class="flex items-center gap-3 text-xs font-semibold text-gray-500 mb-4">
+                    <span class="text-primary">Miscellaneous[cite: 6]</span>
+                    <span class="text-gray-400">23rd April 2026[cite: 6]</span>
+                    <span class="bg-gray-100 px-2 py-0.5 rounded text-gray-600 font-bold border border-gray-200">YC[cite: 6]</span>
+                </div>
+                <p class="text-[15px] text-gray-700 leading-relaxed mb-1 font-serif">
+                    ঢাকা, ২৩ এপ্রিল ২০২৬: গ্রামীণ কল্যাণ সম্প্রতি সারাদেশে সুবিধাবঞ্চিত নারীদের জন্য সম্পূর্ণ বিনামূল...[cite: 6]
+                </p>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="p-5 border-b border-gray-200">
+                <h2 class="text-[19px] font-bold text-gray-900 leading-snug mb-3 font-serif">
+                    চক্ষুচিকিৎসা ও নার্সিং কলেজ নিয়ে পরিসর বাড়াচ্ছে গ্রামীণ হেলথ[cite: 6]
+                </h2>
+                <div class="flex items-center gap-3 text-xs font-semibold text-gray-500 mb-4">
+                    <span class="text-primary">Miscellaneous[cite: 6]</span>
+                    <span class="text-gray-400">22nd April 2026[cite: 6]</span>
+                    <span class="bg-gray-100 px-2 py-0.5 rounded text-gray-600 font-bold border border-gray-200">YC[cite: 6]</span>
+                </div>
+                <img src="https://placehold.co/600x400/eeeeee/999999?text=School+Testing" alt="School Testing" class="w-full h-auto object-cover mb-2">
+                <p class="text-[11px] text-gray-500 mb-3 font-medium">Eye screening of students at a school. Photo: GHS.[cite: 6]</p>
+                <p class="text-[15px] text-gray-700 leading-relaxed mb-1 font-serif">
+                    গ্রামীণ হেলথ কেয়ার সার্ভিসেস লিমিটেড সম্প্রতি "ভিশন ২০৩০" রোডম্যাপের অধীনে নারী নেতৃত্বাধীন নত...[cite: 6]
+                </p>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="p-5 border-b border-gray-200">
+                <h2 class="text-[19px] font-bold text-gray-900 leading-snug mb-3">
+                    Expansion of Grameen Health Care Services continues with eye care and nursing college[cite: 6]
+                </h2>
+                <div class="flex items-center gap-3 text-xs font-semibold text-gray-500 mb-4">
+                    <span class="text-primary">Miscellaneous[cite: 6]</span>
+                    <span class="text-gray-400">22nd April 2026[cite: 6]</span>
+                    <span class="bg-gray-100 px-2 py-0.5 rounded text-gray-600 font-bold border border-gray-200">YC[cite: 6]</span>
+                </div>
+                <img src="https://placehold.co/600x400/eeeeee/999999?text=Hospital" alt="Hospital" class="w-full h-auto object-cover mb-2">
+                <p class="text-[11px] text-gray-500 mb-3 font-medium">Thakurgaon Grameen Eye Hospital. Photo: GHS[cite: 6]</p>
+                <p class="text-[15px] text-gray-700 leading-relaxed mb-1">
+                    Grameen Health Care Services Limited(GHS) is accelerating its growth under the comprehensive Vision 2030 roadmap, launching women-led Green Vision Centers and converting all hospitals and Vision Centers to solar-powered operations.Established in 2006 as a non-profit soc...[cite: 6]
+                </p>
+            </article>
+
+            <!-- Article 5 -->
+            <article class="p-5 border-b border-gray-200">
+                <h2 class="text-[19px] font-bold text-gray-900 leading-snug mb-3">
+                    Registration is now open for the 16th Social Business Day in Dhaka, Bangladesh[cite: 6]
+                </h2>
+                <div class="flex items-center gap-3 text-xs font-semibold text-gray-500 mb-4">
+                    <span class="text-primary">Miscellaneous[cite: 6]</span>
+                    <span class="text-gray-400">13th April 2026[cite: 6]</span>
+                    <span class="bg-gray-100 px-2 py-0.5 rounded text-gray-600 font-bold border border-gray-200">YC[cite: 6]</span>
+                </div>
+                <div class="w-full bg-[#dff5f8] border border-cyan-100 p-6 flex flex-col items-center justify-center text-center mb-4 relative">
+                    <div class="absolute top-2 left-2 text-[10px] font-bold text-gray-500">16th SOCIAL BUSINESS<br>June 27-28, 2026<br>Savar, Bangladesh[cite: 6]</div>
+                    <div class="absolute top-2 right-2 text-[10px] font-bold text-gray-500 flex gap-2">CELEBRATING<br>20 years | 50 years[cite: 6]</div>
+                    <h3 class="font-black text-2xl text-gray-800 leading-tight mt-10">REGISTRATION <br><span class="text-blue-500 font-light">IS OPEN NOW[cite: 6]</span></h3>
+                    <div class="bg-[#c2185b] text-white px-4 py-1 rounded-sm mt-4 text-sm font-semibold">socialbusinesspedia.com[cite: 6]</div>
+                    <div class="absolute bottom-2 left-2 text-[10px] font-bold text-gray-500">June 29, 2026<br>Academia Dialogue &<br>3ZERO Club Convention[cite: 6]</div>
+                    <div class="absolute bottom-2 right-2 text-[10px] font-bold text-gray-500">Organized by<br>Yunus Centre[cite: 6]</div>
+                </div>
+                <p class="text-[15px] text-gray-700 leading-relaxed mb-1">
+                    The 16th Social Business Day will be held at the Samajik Convention Centre, Savar, Dhaka on June 27-28, 2026, organised by the Yunus Centre in collaboration with the Grameen Organizations. The Social Business Day is an annual global gathering organised by t...[cite: 6]
+                </p>
+            </article>
+
+            <!-- Article 6 -->
+            <article class="p-5 border-b border-gray-200">
+                <h2 class="text-[19px] font-bold text-gray-900 leading-snug mb-3 font-serif">
+                    গ্রামীণ হেলথটেক অফিস পরিদর্শনে প্রফেসর ইউনূস, ডিজিটাল স্বাস্থ্যসেবায় জোর[cite: 6]
+                </h2>
+                <div class="flex items-center gap-3 text-xs font-semibold text-gray-500 mb-4">
+                    <span class="text-primary">Miscellaneous[cite: 6]</span>
+                    <span class="text-gray-400">09th April 2026[cite: 6]</span>
+                    <span class="bg-gray-100 px-2 py-0.5 rounded text-gray-600 font-bold border border-gray-200">YC[cite: 6]</span>
+                </div>
+                <img src="https://placehold.co/600x400/eeeeee/999999?text=Office+Visit" alt="Office Visit" class="w-full h-auto object-cover mb-4">
+                <p class="text-[15px] text-gray-700 leading-relaxed mb-1 font-serif">
+                    ঢাকা ৯ এপ্রিল, ২০২৬: বাংলাদেশের সর্বস্তরের মানুষ, বিশেষ করে অর্থনৈতিক পিরামিডের নিচে থাকা গোষ্ঠ...[cite: 6]
+                </p>
+            </article>
+
+            <!-- Article 7 -->
+            <article class="p-5 border-b border-gray-200">
+                <h2 class="text-[19px] font-bold text-gray-900 leading-snug mb-3">
+                    15th Social Business Day 2025 to be held on June 27-28[cite: 6]
+                </h2>
+                <div class="flex items-center gap-3 text-xs font-semibold text-gray-500 mb-4">
+                    <span class="text-primary">Miscellaneous[cite: 6]</span>
+                    <span class="text-gray-400">17th June 2025[cite: 6]</span>
+                    <span class="bg-gray-100 px-2 py-0.5 rounded text-gray-600 font-bold border border-gray-200">YC[cite: 6]</span>
+                </div>
+                <p class="text-[15px] text-gray-700 leading-relaxed mb-1">
+                    15th Social Business Day 2025 to be held on June 27-28[cite: 6]<br>
+                    Press Release The 15th edition of Social BUSINESS Day, organized by the Yunus Centre and Grameen Group, will take place on June 27-28, 2025, at the Samajik Convention Centre in Zirabo, Savar. This year's theme is: "Social Business is the Most Effect...[cite: 6]
+                </p>
+            </article>
+
+            <!-- Article 8 -->
+            <article class="p-5 border-b border-gray-200">
+                <h2 class="text-[19px] font-bold text-gray-900 leading-snug mb-3">
+                    Statement from Professor Muhammad Yunus:[cite: 6]
+                </h2>
+                <div class="flex items-center gap-3 text-xs font-semibold text-gray-500 mb-4">
+                    <span class="text-primary">Miscellaneous[cite: 6]</span>
+                    <span class="text-gray-400">07th August 2024[cite: 6]</span>
+                    <span class="bg-gray-100 px-2 py-0.5 rounded text-gray-600 font-bold border border-gray-200">YC[cite: 6]</span>
+                </div>
+                <p class="text-[15px] text-gray-700 leading-relaxed mb-1">
+                    Statement from Professor Muhammad Yunus: "I congratulate the brave students who took the lead in making our Second Victory Day possible and to the people for giving your total support to them. Let us make the best use of our new victory. Let us not ...[cite: 6]
+                </p>
+            </article>
+
+            <!-- Article 9 -->
+            <article class="p-5 border-b border-gray-200">
+                <h2 class="text-[19px] font-bold text-gray-900 leading-snug mb-3 font-serif">
+                    দেশবাসীর উদ্দেশ্যে প্রফেসর ইউনূসের বক্তব্য[cite: 6]
+                </h2>
+                <div class="flex items-center gap-3 text-xs font-semibold text-gray-500 mb-4">
+                    <span class="text-primary">Miscellaneous[cite: 6]</span>
+                    <span class="text-gray-400">07th August 2024[cite: 6]</span>
+                    <span class="bg-gray-100 px-2 py-0.5 rounded text-gray-600 font-bold border border-gray-200">YC[cite: 6]</span>
+                </div>
+                <p class="text-[15px] text-gray-700 leading-relaxed mb-1 font-serif">
+                    ০৭ আগষ্ট ২০২৪ দেশবাসীর উদ্দেশ্যে প্রফেসর ইউনূসের বক্তব্য: "আমি সাহসী ছাত্রদেরকে অভিনন্দন[cite: 6]
+                </p>
+            </article>
+
+            <!-- Article 10 -->
+            <article class="p-5 border-b border-gray-200">
+                <h2 class="text-[19px] font-bold text-gray-900 leading-snug mb-3">
+                    Prof. Muhammad Yunus felicitated in Manila on the occasion of his 40th anniversary of receiving the "Ramon Magsaysay" Award.[cite: 6]
+                </h2>
+                <div class="flex items-center gap-3 text-xs font-semibold text-gray-500 mb-4">
+                    <span class="text-primary">Miscellaneous[cite: 6]</span>
+                    <span class="text-gray-400">03rd July 2024[cite: 6]</span>
+                    <span class="bg-gray-100 px-2 py-0.5 rounded text-gray-600 font-bold border border-gray-200">YC[cite: 6]</span>
+                </div>
+                <img src="https://placehold.co/600x400/eeeeee/999999?text=Award" alt="Award Image" class="w-full h-auto object-cover mb-4">
+                <p class="text-[15px] text-gray-700 leading-relaxed mb-1">
+                    Yunus Centre Press Release - 03 July 2024 This was made a part of the 65th Anniversary of the Magsaysay Award itself. The event honored the Filipino awardees of the Magsaysay prize in the presence of the diplomatic community. Susanna B Afan Presi...[cite: 6]
+                </p>
+            </article>
+
+            <!-- Pagination -->
+            <div class="p-5 text-[15px] text-gray-600 flex flex-col items-start gap-4 pb-8">
+                <div>
+                    view 1 to 10 of 485 records[cite: 6]
+                </div>
+                <div class="flex flex-wrap gap-2 text-sm font-medium">
+                    <span class="px-2 py-1 bg-gray-200 rounded text-gray-800">1[cite: 6]</span>
+                    <a href="#" class="px-2 py-1 text-primary hover:bg-gray-100 rounded">2[cite: 6]</a>
+                    <a href="#" class="px-2 py-1 text-primary hover:bg-gray-100 rounded">3[cite: 6]</a>
+                    <a href="#" class="px-2 py-1 text-primary hover:bg-gray-100 rounded">4[cite: 6]</a>
+                    <a href="#" class="px-2 py-1 text-primary hover:bg-gray-100 rounded">5[cite: 6]</a>
+                    <a href="#" class="px-2 py-1 text-primary hover:bg-gray-100 rounded">Next >[cite: 6]</a>
+                    <a href="#" class="px-2 py-1 text-primary hover:bg-gray-100 rounded">Last >>[cite: 6]</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Sidebar Widgets (Stacked below on mobile) -->
+        <aside class="lg:col-span-1 flex flex-col w-full">
+            
+            <!-- Quick Links / Recent Sidebar Feed -->
+            <div class="w-full bg-white">
+                <div class="p-4 border-b border-gray-100 flex items-center justify-center">
+                     <span class="text-primary font-bold text-[15px]">Social BusinessPedia.com<br><span class="text-gray-500 font-semibold text-xs">A platform for Social Business[cite: 6]</span></span>
+                </div>
+                
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rice Field" class="w-full h-auto object-cover">
+                
+                <div class="p-5 space-y-5 bg-gray-50 border-b border-gray-200 shadow-inner">
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-[15px] leading-snug mb-1">Grameen Kalyan Launches Free Cervical and Breast Cancer Screening Initiative[cite: 6]</h3>
+                        <a href="#" class="text-primary text-sm font-bold flex items-center gap-1">> Read More[cite: 6]</a>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-[15px] leading-snug mb-1 font-serif">বিনামূল্যে জরায়ুমুখ ও ব্রেস্ট ক্যান্সার স্ক্রিনিং কার্যক্রম শুরু করল গ্রামীণ কল্যাণ[cite: 6]</h3>
+                        <a href="#" class="text-primary text-sm font-bold flex items-center gap-1">> Read More[cite: 6]</a>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-[15px] leading-snug mb-1 font-serif">চক্ষুচিকিৎসা ও নার্সিং কলেজ নিয়ে পরিসর বাড়াচ্ছে গ্রামীণ হেলথ[cite: 6]</h3>
+                        <a href="#" class="text-primary text-sm font-bold flex items-center gap-1">> Read More[cite: 6]</a>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-[15px] leading-snug mb-1">Expansion of Grameen Health Care Services continues with eye care and nursing college[cite: 6]</h3>
+                        <a href="#" class="text-primary text-sm font-bold flex items-center gap-1">> Read More[cite: 6]</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Panel -->
+            <div class="bg-faqTeal text-white relative flex flex-col items-center justify-center p-8 overflow-hidden w-full">
+                <div class="relative z-10 text-center flex flex-col items-center py-6">
+                    <h2 class="text-[7rem] font-black leading-none mb-4 tracking-tighter">FAQ[cite: 6]</h2>
+                    <h3 class="font-bold text-lg mb-2">FAQ ON YSBC[cite: 6]</h3>
+                    <p class="font-bold text-sm mb-6 max-w-[250px]">Questions and Answers on Yunus Social Business Centres[cite: 6]</p>
+                    <a href="#" class="bg-white text-faqTeal px-6 py-2 rounded-sm font-bold text-sm shadow hover:bg-gray-100 transition">View Details >[cite: 6]</a>
+                </div>
+            </div>
+
+            <!-- Latest Book Block -->
+            <div class="p-6 bg-white border-b border-gray-200 flex flex-col items-center w-full">
+                <h3 class="font-bold text-gray-800 mb-6 uppercase tracking-wider text-sm border-b pb-2 w-full text-center">Latest Book[cite: 6]</h3>
+                
+                <div class="bg-gray-50 p-6 border border-gray-200 shadow-sm mb-6 flex flex-col items-center text-center max-w-[250px] w-full">
+                    <h4 class="font-black text-2xl leading-tight mb-2 text-gray-800">A WORLD of <br> THREE ZEROS[cite: 6]</h4>
+                    <p class="text-[8px] font-bold text-gray-600 mb-2 uppercase tracking-wide leading-tight">THE NEW ECONOMICS OF<br>ZERO POVERTY,<br>ZERO UNEMPLOYMENT, AND<br>ZERO NET CARBON EMISSIONS[cite: 6]</p>
+                    <div class="text-[11px] text-gray-500 uppercase font-black tracking-widest mb-2 border-b border-t py-1">MUHAMMAD YUNUS[cite: 6]</div>
+                    <p class="font-serif font-bold text-sm text-gray-800">BANKER TO THE POOR[cite: 6]</p>
+                </div>
+
+                <a href="#" class="text-primary text-sm font-bold hover:underline">View Details >[cite: 6]</a>
+            </div>
+
+        </aside>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-footerBlue text-white pt-10 pb-6 px-6 text-center mt-4">
+        <!-- Contact Info -->
+        <div class="mb-8 flex flex-col items-center">
+            <h2 class="text-2xl font-bold mb-1">Yunus Centre[cite: 6]</h2>
+            <p class="text-sm text-blue-200 mb-6 font-semibold">Global Hub for Social Business[cite: 6]</p>
+            <div class="text-[15px] text-blue-100 flex flex-col items-center space-y-2">
+                <p class="flex items-center gap-2"><i class="fas fa-check-square"></i> Grameen Bank Bhaban 16th Floor<br>Mirpur 2, Dhaka 1216[cite: 6]</p>
+                <p class="flex items-center gap-2 mt-2"><i class="fas fa-phone"></i> +88 02 9023010[cite: 6]</p>
+                <p class="flex items-center gap-2 mt-2"><i class="fas fa-envelope"></i> info@yunuscentre.org[cite: 6]</p>
+            </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="mb-8">
+            <h3 class="text-base font-bold mb-4 uppercase tracking-wider text-blue-100 border-b border-blue-400 inline-block pb-1">Quick Links[cite: 6]</h3>
+            <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-[15px] text-blue-100 font-medium">
+                <a href="#" class="hover:text-white transition">About Us[cite: 6]</a>
+                <a href="#" class="hover:text-white transition">Events[cite: 6]</a>
+                <a href="#" class="hover:text-white transition">Social Business[cite: 6]</a>
+                <a href="#" class="hover:text-white transition">YSBC[cite: 6]</a>
+                <a href="#" class="hover:text-white transition">Visit Program[cite: 6]</a>
+                <a href="#" class="hover:text-white transition">News[cite: 6]</a>
+                <a href="#" class="hover:text-white transition">Publication[cite: 6]</a>
+            </div>
+        </div>
+        
+        <!-- Website Links -->
+        <div class="mb-10">
+            <h3 class="text-base font-bold mb-4 uppercase tracking-wider text-blue-100 border-b border-blue-400 inline-block pb-1">Website[cite: 6]</h3>
+            <p class="text-sm text-blue-100 mb-4 leading-relaxed max-w-[280px] mx-auto">For about Nobel laureate Professor Muhammad Yunus and Social Business Information[cite: 6]</p>
+            <div class="space-y-3 text-[15px] max-w-[280px] mx-auto">
+                <a href="#" class="bg-white text-gray-800 p-3 rounded shadow flex items-center gap-3 hover:bg-gray-100 transition">
+                    <img src="https://placehold.co/30x30" alt="Icon" class="rounded border">
+                    <span class="font-semibold text-left">Professor Muhammad Yunus[cite: 6]</span>
+                </a>
+                <a href="#" class="bg-white text-gray-800 p-3 rounded shadow flex items-center gap-3 hover:bg-gray-100 transition">
+                    <i class="fas fa-leaf text-green-600 text-xl w-[30px] text-center"></i> 
+                    <span class="font-semibold text-left">Social Business Pedia[cite: 6]</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="pt-6 border-t border-blue-400/30 text-[13px] text-blue-200">
+            <p>Copyright ©2018 muhammadyunus.org.<br>All Rights Reserved. (Hit Counter)[cite: 6]</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        document.querySelectorAll('a[href="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+            });
+        });
+
+        // Toggle mobile navigation menu
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

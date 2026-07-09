@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yunus Centre - Global Hub for Social Business</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0056b3',
+                        footerBlue: '#3b659c',
+                        faqTeal: '#0a627a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .faq-bg-text {
+            font-size: clamp(8rem, 20vw, 18rem);
+            line-height: 1;
+            color: rgba(255, 255, 255, 0.05);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="text-xl md:text-2xl font-bold text-gray-700 flex items-center gap-2">
+                        <i class="fas fa-globe text-primary"></i> Yunus Centre
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Icons -->
+                <div class="flex md:hidden items-center space-x-4 text-gray-600">
+                    <a href="#" class="hover:text-primary"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-primary"><i class="fab fa-linkedin-in"></i></a>
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-6 text-sm font-semibold text-gray-600 uppercase">
+                    <a href="#" class="hover:text-primary transition">About Us</a>
+                    <a href="#" class="hover:text-primary transition">Social Business</a>
+                    <a href="#" class="hover:text-primary transition">Visit Program</a>
+                    <a href="#" class="hover:text-primary transition">Publication</a>
+                    <a href="#" class="hover:text-primary transition">Media</a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-4 space-y-1 shadow-lg absolute w-full left-0">
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-primary hover:bg-gray-50 uppercase">About Us</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-primary hover:bg-gray-50 uppercase">Social Business</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-primary hover:bg-gray-50 uppercase">Visit Program</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-primary hover:bg-gray-50 uppercase">Publication</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-primary hover:bg-gray-50 uppercase">Media</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative w-full h-[70vh] md:h-[80vh] bg-cover bg-center flex flex-col items-center justify-center text-center" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="absolute inset-0 bg-white/30 md:bg-white/20"></div>
+        <div class="relative z-10 p-6 flex flex-col items-center h-full justify-center w-full mt-10 md:mt-0">
+            <h1 class="text-3xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-2 md:mb-4">
+                Human being is a <br class="hidden md:block"> fighter, human being <br class="hidden md:block"> is a creator.
+            </h1>
+            <p class="text-lg md:text-2xl font-medium text-gray-800 mb-8">Nobel Laureate Professor Muhammad Yunus</p>
+            
+            <div class="mt-auto pb-6">
+                <p class="text-sm font-bold uppercase tracking-widest text-gray-800 mb-1">Scroll</p>
+                <i class="fas fa-chevron-down text-gray-800 animate-bounce"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured News & News Grid -->
+    <section class="max-w-7xl mx-auto px-4 py-12">
+        <!-- Featured Article (Appears first on mobile, side-by-side or top on desktop) -->
+        <div class="flex flex-col md:flex-row gap-8 items-start mb-12 bg-white md:bg-transparent p-6 md:p-0 shadow-sm md:shadow-none border-l-4 md:border-none border-primary">
+            <div class="md:w-1/3 md:border-l-4 md:border-primary md:pl-6">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 leading-tight mb-4 md:mb-0">Grameen Kalyan Launches Free Cervical and Breast Cancer Screening Initiative</h2>
+                
+                <div class="flex items-center gap-2 text-sm text-primary font-semibold mb-4 md:hidden">
+                    <i class="fas fa-folder-open"></i> Miscellaneous
+                    <span class="text-gray-500 ml-2">23rd April 2026</span>
+                </div>
+
+                <div class="hidden md:block mt-6">
+                    <p class="font-bold text-gray-700">APR</p>
+                    <p class="text-4xl font-bold text-primary leading-none">23</p>
+                    <p class="font-bold text-gray-700">2026</p>
+                </div>
+            </div>
+            <div class="md:w-2/3">
+                <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+                    DHAKA, April 23, 2026: Grameen Kalyan recently launched a healthcare initiative providing 20,000 completely free cervical and clinical breast cancer screenings to underprivileged women across Bangladesh. The pilot project, which began on April 19, 2026, specifically targets married women between the ages of 30 and 60 who have been married for <a href="#" class="text-primary hover:underline font-semibold">read more</a>
+                </p>
+                <div class="mt-6 hidden md:block">
+                    <button class="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-2 rounded transition font-semibold">Read All News</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4-Card Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-lg shadow border overflow-hidden flex flex-col group cursor-pointer hover:shadow-md transition">
+                <img src="https://placehold.co/400x250" alt="News Image" class="w-full h-48 md:h-40 object-cover group-hover:opacity-90 transition">
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <h3 class="font-bold text-gray-800 mb-3 text-sm leading-snug">বিনামূল্যে জরায়ুমুখ ও ব্রেস্ট ক্যান্সার স্ক...</h3>
+                    <p class="text-xs text-primary font-semibold"><i class="fas fa-folder-open"></i> Miscellaneous</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white rounded-lg shadow border overflow-hidden flex flex-col group cursor-pointer hover:shadow-md transition">
+                <img src="https://placehold.co/400x250" alt="News Image" class="w-full h-48 md:h-40 object-cover group-hover:opacity-90 transition">
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <div>
+                        <p class="text-xs text-gray-500 mb-1 md:hidden">Eye screening of students at a school. Photo: GHS.</p>
+                        <h3 class="font-bold text-gray-800 mb-3 text-sm leading-snug">চক্ষুচিকিৎসা ও নার্সিং কলেজ নিয়ে পরিসর বাড়া...</h3>
+                    </div>
+                    <p class="text-xs text-primary font-semibold mt-2"><i class="fas fa-folder-open"></i> Miscellaneous</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white rounded-lg shadow border overflow-hidden flex flex-col group cursor-pointer hover:shadow-md transition">
+                <img src="https://placehold.co/400x250" alt="News Image" class="w-full h-48 md:h-40 object-cover group-hover:opacity-90 transition">
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <div>
+                        <p class="text-xs text-gray-500 mb-1 md:hidden">Thakurgaon Grameen Eye Hospital. Photo: GHS.</p>
+                        <h3 class="font-bold text-gray-800 mb-3 text-sm leading-snug">Expansion of Grameen Health Care Services continues with eye care and nursing college...</h3>
+                    </div>
+                    <p class="text-xs text-primary font-semibold mt-2"><i class="fas fa-folder-open"></i> Miscellaneous</p>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-white rounded-lg shadow border overflow-hidden flex flex-col group cursor-pointer hover:shadow-md transition">
+                <div class="bg-blue-50 h-48 md:h-40 flex flex-col items-center justify-center p-4 text-center border-b group-hover:bg-blue-100 transition">
+                    <div class="flex items-center gap-2 mb-2 md:hidden">
+                        <i class="fas fa-users text-pink-500 text-2xl"></i>
+                    </div>
+                    <h2 class="text-lg md:text-xl font-black text-pink-600 leading-tight">REGISTRATION <br><span class="text-blue-500">IS OPEN NOW</span></h2>
+                    <p class="text-xs text-gray-500 mt-2 md:hidden">socialbusinesspedia.com</p>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <h3 class="font-bold text-gray-800 mb-3 text-sm leading-snug">Registration is now open for the 16th Social Business Day in Dhaka, Bangladesh...</h3>
+                    <p class="text-xs text-primary font-semibold"><i class="fas fa-folder-open"></i> Miscellaneous</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Only Button -->
+        <div class="text-center md:hidden">
+            <button class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded transition font-bold uppercase text-sm tracking-wide w-full">Read All News</button>
+        </div>
+    </section>
+
+    <!-- Quotes Section -->
+    <section class="bg-blue-50 py-16 text-center px-4 border-y border-gray-200">
+        <h3 class="text-sm font-bold text-gray-500 tracking-widest uppercase mb-6">Quotes From<br class="md:hidden"> Professor Yunus</h3>
+        <p class="max-w-4xl mx-auto text-xl md:text-3xl font-light text-gray-800 italic leading-relaxed mb-8">
+            "All human beings are born entrepreneurs. Some get a chance to unleash that capacity. Some never got the chance, never knew that he or she has that capacity."
+        </p>
+        <button class="bg-white border border-gray-300 text-gray-700 hover:bg-gray-100 px-8 py-3 rounded transition font-semibold text-sm uppercase tracking-wide">Read All Quotes</button>
+    </section>
+
+    <!-- Visit Programs Section -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+        <div class="mb-10 text-center md:text-left max-w-4xl md:mx-auto lg:mx-0">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Visit Programs</h2>
+            <p class="text-gray-600 text-sm md:text-base leading-relaxed">Professor Yunus has been promoting the concept of Grameen social businesses for a long time with the belief that this model will address the problems unresolved by the present capitalist system. Social business is a Non-dividend Company, which returns the investor's money over time and is entirely dedicated to achieving social goals. The ultimate goal of Yunus Centre is to send poverty to museums. It strives to engage students, individuals and organizations in the social business movement through workshops, internships programs, immersion programs, projects, etc. to achieve the goal.</p>
+        </div>
+        
+        <!-- Grid on desktop, horizontal scroll on mobile -->
+        <div class="flex md:grid overflow-x-auto md:overflow-visible md:grid-cols-3 hide-scrollbar gap-6 pb-4 snap-x">
+            <!-- Program 1 -->
+            <div class="bg-white p-6 shadow-sm border rounded min-w-[260px] md:min-w-0 flex flex-col snap-start">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-3 uppercase">Immersion Program</h3>
+                <p class="text-gray-600 mb-6 text-sm flex-grow">The Immersion Program is a one-month intensive program, which aims to provide young minds with an opportunity to learn about the concept of social business, as well as the philosophy of Nobel Peace Prize Laureate Professor Muhammad Yunus.</p>
+                <a href="#" class="text-primary font-bold hover:underline mt-auto flex items-center gap-1">Read More <i class="fas fa-angle-right"></i></a>
+            </div>
+            <!-- Program 2 -->
+            <div class="bg-white p-6 shadow-sm border rounded min-w-[260px] md:min-w-0 flex flex-col snap-start">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-3 uppercase">Exposure Visit</h3>
+                <p class="text-gray-600 mb-6 text-sm flex-grow">Since October 2006, when Professor Yunus and Grameen Bank jointly received the Nobel Peace Prize, local and international interest in Professor Yunus' work has continuously increased in order to address this ever-growing attention.</p>
+                <a href="#" class="text-primary font-bold hover:underline mt-auto flex items-center gap-1">Read More <i class="fas fa-angle-right"></i></a>
+            </div>
+            <!-- Program 3 -->
+            <div class="bg-white p-6 shadow-sm border rounded min-w-[260px] md:min-w-0 flex flex-col snap-start">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-3 uppercase">Yunus Centre Internship</h3>
+                <p class="text-gray-600 mb-6 text-sm flex-grow">Being the global centre of excellence for social business incubation, Yunus Centre aims to involve brilliant young minds from all over the world to study on social business ideas. The internship program allows interns to gain valuable insights.</p>
+                <a href="#" class="text-primary font-bold hover:underline mt-auto flex items-center gap-1">Read More <i class="fas fa-angle-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="bg-gray-100 py-16 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2 uppercase tracking-wide">About Us</h2>
+                <p class="text-gray-500 font-medium">Yunus Centre - Global Hub for Social Business</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 shadow-sm border rounded flex flex-col">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Who we are</h3>
+                    <p class="text-gray-600 text-base leading-relaxed mb-6 flex-grow">Since October 2006, when Professor Yunus and Grameen Bank jointly received the Nobel Peace Prize, local and international interest in Professor Yunus' work has continuously increased. In order to address the growing inquiries...</p>
+                    <a href="#" class="text-primary font-bold hover:underline mt-auto flex items-center gap-1">Read More <i class="fas fa-angle-right"></i></a>
+                </div>
+                
+                <div class="bg-white p-8 shadow-sm border rounded flex flex-col">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">What we do</h3>
+                    <p class="text-gray-600 text-base leading-relaxed mb-6 flex-grow">The Yunus Centre's activities include, but certainly are not limited to, the following: Poverty-Free World Campaign. Professor Yunus has long said that poverty is an unnecessary condition imposed by society on people...</p>
+                    <a href="#" class="text-primary font-bold hover:underline mt-auto flex items-center gap-1">Read More <i class="fas fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Business Section -->
+    <section class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8 leading-tight tracking-tight">SOCIAL <br class="hidden md:block"> BUSINESS</h2>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">What is social business?</h3>
+                <p class="text-gray-600 mb-6 text-base leading-relaxed font-semibold">
+                    A social business is a non-dividend business whose aim is to solve a social problem through business methods. It is different from both a traditional personal profit-making business and a not-for-profit organization.
+                </p>
+                <p class="text-gray-600 text-base leading-relaxed">
+                    All profits from operation of the business must go toward achieving one or more social objectives in addition to covering costs of the company. No personal gain is desired by its investors. A social business can address problems such as providing healthcare, housing, and financial services for the poor, nutrition for malnourished children, providing safe drinking water, introducing renewable energy and much more in a business way.
+                </p>
+            </div>
+            <div class="bg-gray-50 p-6 md:p-8 rounded-xl border border-gray-100">
+                <h3 class="text-2xl font-bold text-gray-800 mb-8">7 Principles of Social Business</h3>
+                <ul class="space-y-6 text-base text-gray-700">
+                    <li class="flex gap-5 items-start">
+                        <span class="font-black text-primary text-3xl leading-none pt-1">01</span> 
+                        <p class="leading-relaxed">Business objective will be to overcome poverty, or one or more problems (such as education, health, technology access, and environment) which threaten people and society; not profit maximization.</p>
+                    </li>
+                    <li class="flex gap-5 items-center">
+                        <span class="font-black text-primary text-3xl leading-none">02</span> 
+                        <p>Financial and economic sustainability.</p>
+                    </li>
+                    <li class="flex gap-5 items-center">
+                        <span class="font-black text-primary text-3xl leading-none">03</span> 
+                        <p>Investors get back their investment amount only. No dividend is given beyond investment money.</p>
+                    </li>
+                    <li class="flex gap-5 items-start">
+                        <span class="font-black text-primary text-3xl leading-none pt-1">04</span> 
+                        <p>When investment amount is paid back, company profit stays with the company for expansion and improvement.</p>
+                    </li>
+                    <li class="flex gap-5 items-center">
+                        <span class="font-black text-primary text-3xl leading-none">05</span> 
+                        <p>Gender sensitive and environmentally conscious.</p>
+                    </li>
+                    <li class="flex gap-5 items-center">
+                        <span class="font-black text-primary text-3xl leading-none">06</span> 
+                        <p>Workforce gets market wage with better working conditions.</p>
+                    </li>
+                    <li class="flex gap-5 items-center">
+                        <span class="font-black text-primary text-3xl leading-none">07</span> 
+                        <p class="font-bold">...Do it with joy</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Published Around Media -->
+    <section class="bg-gray-50 py-16 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-10 text-center md:text-left uppercase">News published around the world media</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+                <!-- Article 1 -->
+                <div class="bg-white rounded-lg border overflow-hidden shadow-sm hover:shadow-md transition group">
+                    <img src="https://placehold.co/400x250" alt="News Image" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="p-6 relative bg-white">
+                        <p class="text-xs text-gray-500 mb-3 font-semibold tracking-wide uppercase">News / 23 APRIL 2026</p>
+                        <h3 class="font-bold text-gray-800 text-lg mb-4 leading-snug">Grameen Kalyan Launches Free Cervical and Breast Cancer Screening Initiative</h3>
+                        <a href="#" class="text-primary font-bold hover:underline text-sm flex items-center gap-1">Read More <i class="fas fa-angle-right"></i></a>
+                    </div>
+                </div>
+                <!-- Article 2 -->
+                <div class="bg-white rounded-lg border overflow-hidden shadow-sm hover:shadow-md transition group">
+                    <div class="p-6 border-b bg-gray-100 flex items-center justify-center h-56 group-hover:bg-gray-200 transition">
+                        <span class="text-gray-400 font-medium">Image Placeholder</span>
+                    </div>
+                    <div class="p-6 relative bg-white">
+                        <p class="text-xs text-gray-500 mb-3 font-semibold tracking-wide uppercase">News / 23 APRIL 2026</p>
+                        <h3 class="font-bold text-gray-800 text-lg mb-4 leading-snug">বিনামূল্যে জরায়ুমুখ ও ব্রেস্ট ক্যান্সার স্ক্রিনিং কার্যক্রম শুরু করল গ্রামীণ কল্যাণ</h3>
+                        <a href="#" class="text-primary font-bold hover:underline text-sm flex items-center gap-1">Read More <i class="fas fa-angle-right"></i></a>
+                    </div>
+                </div>
+                <!-- Article 3 -->
+                <div class="bg-white rounded-lg border overflow-hidden shadow-sm hover:shadow-md transition group">
+                    <img src="https://placehold.co/400x250" alt="News Image" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="p-6 relative bg-white">
+                        <p class="text-xs text-gray-500 mb-1">School Sight Testing Programme. Photo: GHS.</p>
+                        <p class="text-xs text-gray-500 mb-3 font-semibold tracking-wide uppercase">News / 22 APRIL 2026</p>
+                        <h3 class="font-bold text-gray-800 text-lg mb-4 leading-snug">চক্ষুচিকিৎসা ও নার্সিং কলেজ নিয়ে পরিসর বাড়াচ্ছে গ্রামীণ হেলথ</h3>
+                        <a href="#" class="text-primary font-bold hover:underline text-sm flex items-center gap-1">Read More <i class="fas fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center md:text-left">
+                 <button class="border border-gray-300 bg-white text-gray-700 hover:bg-gray-100 px-8 py-3 rounded transition font-bold text-sm uppercase tracking-wide">Read All News</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="relative bg-faqTeal py-24 px-4 text-center overflow-hidden">
+        <div class="faq-bg-text select-none pointer-events-none">FAQ</div>
+        <div class="relative z-10 max-w-4xl mx-auto text-white">
+            <h2 class="text-sm font-bold tracking-widest uppercase mb-6 text-teal-100">FAQ</h2>
+            <h3 class="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-tight">Who will invest in social business? Why?</h3>
+            <p class="text-white/90 mb-10 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+                Social business is based on the intrinsic desire of self-sacrifice that resides in all human being for the promotion of well-being of its own species, all living beings, and the planet. Given opportunity, most people who can afford it will choose to invest in social business. In addition, institutions, foundations, businesses, governments, donors agencies, any entity which is involved in investment or charity will invest in social business.
+            </p>
+            <button class="border-2 border-white text-white hover:bg-white hover:text-faqTeal px-10 py-3 rounded transition font-bold uppercase text-sm tracking-widest">See All FAQ</button>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="bg-gray-100 py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center uppercase tracking-wide">Publications</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Pub 1 -->
+                <div class="bg-white p-6 shadow-sm border rounded text-center flex flex-col items-center hover:shadow-md transition">
+                    <h3 class="font-bold text-gray-900 mb-2">FAQ ON YSBC</h3>
+                    <p class="text-xs text-gray-500 mb-6 px-4">Questions and Answers on Yunus Social Business Centres</p>
+                    <div class="w-full flex-grow flex items-center justify-center bg-gray-50 mb-6 p-8 rounded border border-gray-100">
+                        <span class="text-5xl text-gray-300"><i class="fas fa-file-alt"></i></span>
+                    </div>
+                    <a href="#" class="text-primary font-bold hover:underline text-sm mt-auto flex items-center gap-1">View Details <i class="fas fa-angle-right"></i></a>
+                </div>
+                <!-- Pub 2 -->
+                <div class="bg-white p-6 shadow-sm border rounded text-center flex flex-col items-center hover:shadow-md transition">
+                    <h3 class="font-bold text-gray-900 mb-2">YC BROCHURE</h3>
+                    <p class="text-xs text-gray-500 mb-6 px-4">Yunus Centre Global Hub for Social Business</p>
+                    <div class="w-full flex-grow flex items-center justify-center bg-gray-50 mb-6 p-8 rounded border border-gray-100">
+                         <span class="text-5xl text-gray-300"><i class="fas fa-book-open"></i></span>
+                    </div>
+                    <a href="#" class="text-primary font-bold hover:underline text-sm mt-auto flex items-center gap-1">View Details <i class="fas fa-angle-right"></i></a>
+                </div>
+                <!-- Pub 3 -->
+                <div class="bg-white p-6 shadow-sm border rounded text-center flex flex-col items-center hover:shadow-md transition">
+                    <h3 class="font-bold text-gray-900 mb-2">SPOT LIGHT</h3>
+                    <p class="text-xs text-gray-500 mb-6 px-4">13 Spot Light Super Happiness</p>
+                    <div class="w-full flex-grow flex items-center justify-center bg-gray-50 mb-6 p-8 rounded border border-gray-100">
+                         <span class="text-5xl text-gray-300"><i class="fas fa-lightbulb"></i></span>
+                    </div>
+                    <a href="#" class="text-primary font-bold hover:underline text-sm mt-auto flex items-center gap-1">View Details <i class="fas fa-angle-right"></i></a>
+                </div>
+                <!-- Pub 4 -->
+                <div class="bg-white p-6 shadow-sm border rounded text-center flex flex-col items-center hover:shadow-md transition">
+                    <h3 class="font-bold text-gray-900 mb-2">Yunus Centre Interns Magazine#12</h3>
+                    <p class="text-xs text-gray-500 mb-6 px-4">12th Issue 2020</p>
+                    <div class="w-full flex-grow flex items-center justify-center bg-yellow-50 mb-6 p-8 rounded border-t-4 border-yellow-400">
+                         <span class="font-bold text-yellow-700 text-lg">Interns' Magazine</span>
+                    </div>
+                    <a href="#" class="text-primary font-bold hover:underline text-sm mt-auto flex items-center gap-1">View Details <i class="fas fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button class="bg-footerBlue text-white hover:bg-blue-800 px-10 py-4 rounded transition font-bold uppercase text-sm tracking-wide w-full md:w-auto shadow-md">Read YC INTERNS MAGAZINE</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image and Media Section -->
+    <section class="max-w-7xl mx-auto px-4 py-20 border-t border-gray-200 bg-white">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12 uppercase text-center md:text-left tracking-wide">Image and Media</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <!-- Gallery -->
+            <div class="bg-white border rounded-xl shadow-sm overflow-hidden group">
+                <div class="relative overflow-hidden">
+                    <img src="https://placehold.co/800x500" alt="Japanese Delegation" class="w-full object-cover h-72 group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-4">
+                    <p class="text-base text-gray-800 font-bold leading-tight">Japanese delegation from the YSBC at Kyushu University</p>
+                    <a href="#" class="text-primary font-bold hover:underline text-sm whitespace-nowrap">View All Galleries &rsaquo;</a>
+                </div>
+            </div>
+            <!-- Video -->
+            <div class="bg-black rounded-xl shadow-sm overflow-hidden relative h-72 md:h-auto flex items-center justify-center group cursor-pointer">
+                <img src="https://placehold.co/800x500/333/999?text=Video+Thumbnail" alt="Video Thumbnail" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40 transition">
+                <div class="absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition">
+                    <i class="fab fa-youtube text-red-600 text-7xl bg-white rounded-full leading-none"></i>
+                </div>
+                <div class="absolute top-6 left-6 right-6 text-white z-10 drop-shadow-md">
+                    <h3 class="font-bold text-xl md:text-2xl mb-1">"Artificial intelligence: a blessing or a curse?"</h3>
+                    <p class="text-sm font-medium text-gray-200">Chaire ETI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Widgets Section -->
+    <section class="bg-gray-50 py-20 border-t">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center uppercase tracking-wide">We Are In Social Media</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <!-- Facebook -->
+                <div class="flex flex-col h-full">
+                    <h3 class="text-xl font-bold mb-6 text-center lg:text-left text-gray-800"><i class="fab fa-facebook text-blue-600 mr-2"></i> Facebook</h3>
+                    <div class="bg-white border rounded-xl shadow-sm p-6 flex-grow">
+                        <div class="w-full h-32 bg-blue-50 rounded-lg mb-4 flex flex-col items-center justify-center relative overflow-hidden border border-blue-100">
+                            <span class="text-blue-300 text-3xl font-black absolute tracking-widest opacity-50">SOCIAL BUSINESS</span>
+                        </div>
+                        <div class="flex items-end gap-4 mb-6 -mt-16 relative z-10 px-2">
+                            <div class="w-20 h-20 bg-white border-4 border-white rounded-full flex items-center justify-center shadow-md overflow-hidden">
+                                <i class="fas fa-tree text-green-500 text-4xl"></i>
+                            </div>
+                            <div class="pb-1">
+                                <p class="font-bold text-gray-900 text-xl flex items-center gap-1">Yunus Centre <i class="fas fa-check-circle text-blue-500 text-sm"></i></p>
+                                <p class="text-sm text-gray-500 font-medium">774K followers</p>
+                            </div>
+                        </div>
+                        <p class="text-base text-gray-600 mb-4 leading-relaxed">The Official Page of Yunus Centre. Yunus Centre is the global hub for Social Business dedicated to solving human problems...</p>
+                        <p class="text-sm text-gray-500 flex items-center gap-2 font-medium bg-gray-50 p-2 rounded"><i class="fas fa-building text-gray-400"></i> Nonprofit Organization</p>
+                    </div>
+                </div>
+                
+                <!-- Twitter -->
+                <div class="flex flex-col h-full">
+                    <h3 class="text-xl font-bold mb-6 text-center lg:text-left text-gray-800"><i class="fab fa-twitter text-blue-400 mr-2"></i> Twitter</h3>
+                    <div class="bg-white border rounded-xl shadow-sm p-6 flex-grow flex items-center justify-center text-blue-500 hover:bg-gray-50 transition cursor-pointer">
+                        <span class="font-semibold text-lg">Tweets by Yunus_Centre</span>
+                    </div>
+                </div>
+
+                <!-- Get In Touch -->
+                <div class="flex flex-col h-full">
+                    <h3 class="text-xl font-bold mb-6 text-center lg:text-left text-gray-800"><i class="fas fa-link text-gray-400 mr-2"></i> Get In Touch</h3>
+                    <div class="space-y-4 flex-grow flex flex-col justify-center">
+                        <a href="#" class="flex items-center gap-4 p-4 bg-white border rounded-xl shadow-sm hover:shadow-md hover:border-blue-200 transition group">
+                            <div class="bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-lg group-hover:scale-110 transition"><i class="fab fa-facebook-f text-lg"></i></div>
+                            <span class="text-gray-700 font-medium">Facebook/YunusCentre</span>
+                        </a>
+                        <a href="#" class="flex items-center gap-4 p-4 bg-white border rounded-xl shadow-sm hover:shadow-md hover:border-blue-200 transition group">
+                            <div class="bg-blue-400 text-white w-10 h-10 flex items-center justify-center rounded-lg group-hover:scale-110 transition"><i class="fab fa-twitter text-lg"></i></div>
+                            <span class="text-gray-700 font-medium">twitter/YunusCentre</span>
+                        </a>
+                        <a href="#" class="flex items-center gap-4 p-4 bg-white border rounded-xl shadow-sm hover:shadow-md hover:border-blue-200 transition group">
+                            <div class="bg-blue-700 text-white w-10 h-10 flex items-center justify-center rounded-lg group-hover:scale-110 transition"><i class="fab fa-linkedin-in text-lg"></i></div>
+                            <span class="text-gray-700 font-medium">linkedin/YunusCentre</span>
+                        </a>
+                        <a href="#" class="flex items-center gap-4 p-4 bg-white border rounded-xl shadow-sm hover:shadow-md hover:border-blue-200 transition group">
+                            <div class="bg-red-600 text-white w-10 h-10 flex items-center justify-center rounded-lg group-hover:scale-110 transition"><i class="fab fa-pinterest-p text-lg"></i></div>
+                            <span class="text-gray-700 font-medium">pinterest/YunusCentre</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-footerBlue text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 text-center md:text-left">
+            <!-- Contact Info -->
+            <div>
+                <div class="flex items-center justify-center md:justify-start gap-3 mb-6">
+                    <i class="fas fa-globe text-3xl text-blue-200"></i>
+                    <h2 class="text-3xl font-bold tracking-wide">Yunus Centre</h2>
+                </div>
+                <p class="text-base text-blue-200 mb-8 font-medium">Global Hub for Social Business</p>
+                <ul class="space-y-4 text-sm text-blue-50 flex flex-col items-center md:items-start">
+                    <li class="flex items-start gap-3 text-left">
+                        <i class="fas fa-map-marker-alt mt-1 text-blue-300 text-lg"></i> 
+                        <span class="leading-relaxed">Grameen Bank Bhaban 16th Floor<br>Mirpur 2, Dhaka 1216</span>
+                    </li>
+                    <li class="flex items-center gap-3"><i class="fas fa-phone text-blue-300 text-lg"></i> +88 02 9023010</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-envelope text-blue-300 text-lg"></i> info@yunuscentre.org</li>
+                </ul>
+            </div>
+            
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-bold mb-8 uppercase tracking-wider text-blue-100">Quick Links</h3>
+                <ul class="grid grid-cols-2 gap-y-4 text-base text-blue-50 font-medium">
+                    <li><a href="#" class="hover:text-white hover:underline transition">About Us</a></li>
+                    <li><a href="#" class="hover:text-white hover:underline transition">Events</a></li>
+                    <li><a href="#" class="hover:text-white hover:underline transition">Social Business</a></li>
+                    <li><a href="#" class="hover:text-white hover:underline transition">YSBC</a></li>
+                    <li><a href="#" class="hover:text-white hover:underline transition">Visit Program</a></li>
+                    <li><a href="#" class="hover:text-white hover:underline transition">News</a></li>
+                    <li><a href="#" class="hover:text-white hover:underline transition">Publication</a></li>
+                </ul>
+            </div>
+            
+            <!-- Website Links -->
+            <div>
+                <h3 class="text-xl font-bold mb-8 uppercase tracking-wider text-blue-100">Website</h3>
+                <p class="text-sm text-blue-100 mb-6 leading-relaxed pr-4">For about Nobel laureate Professor Muhammad Yunus and Social Business information:</p>
+                <div class="space-y-4 text-base max-w-sm mx-auto md:mx-0">
+                    <a href="#" class="bg-white text-gray-800 p-4 rounded-lg shadow-md flex items-center gap-4 hover:bg-gray-50 transition transform hover:-translate-y-1 w-full">
+                        <div class="bg-blue-100 text-blue-600 w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-user-tie"></i></div>
+                        <span class="font-bold">Professor Muhammad Yunus</span>
+                    </a>
+                    <a href="#" class="bg-white text-gray-800 p-4 rounded-lg shadow-md flex items-center gap-4 hover:bg-gray-50 transition transform hover:-translate-y-1 w-full">
+                        <div class="bg-blue-100 text-blue-600 w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-book"></i></div>
+                        <span class="font-bold">Social Business Pedia</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-blue-400/30 pt-8 text-center text-sm text-blue-200 font-medium">
+            <p>Copyright ©2018 muhammadyunus.org. All Rights Reserved. [Disclaimer]</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Prevent default behavior for dead links in template
+        document.querySelectorAll('a[href="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+            });
+        });
+
+        // Mobile menu toggle logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Yunus Centre</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0056b3',
+                        headerBlue: '#36689d',
+                        headerMenuBg: '#457ab4',
+                        footerBlue: '#3b659c',
+                        pageBg: '#ffffff',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-pageBg text-gray-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- Top Social Bar (Visible on Mobile) -->
+    <div class="flex justify-between items-center px-4 py-3 bg-gray-50 border-b border-gray-200 md:hidden">
+        <div class="flex items-center gap-3">
+            <a href="#" class="w-7 h-7 rounded-full bg-[#3b5998] text-white flex items-center justify-center text-sm"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="w-7 h-7 rounded-full bg-[#00aced] text-white flex items-center justify-center text-sm"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="w-7 h-7 rounded-full bg-[#007bb6] text-white flex items-center justify-center text-sm"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="w-7 h-7 rounded-full bg-[#cb2027] text-white flex items-center justify-center text-sm"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="text-headerBlue ml-2 text-xl"><i class="fas fa-search"></i></a>
+        </div>
+        <a href="#" class="text-[#009a5a] text-2xl"><i class="fab fa-envira"></i></a>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="bg-headerBlue text-white md:bg-white md:text-gray-800 shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto flex justify-between items-stretch h-16 md:h-20">
+            <div class="flex-shrink-0 flex items-center px-4">
+                <div class="text-2xl font-semibold md:font-bold flex items-center gap-2 tracking-wide">
+                    <i class="fab fa-pagelines text-white/80 md:hidden text-3xl"></i> 
+                    <i class="fas fa-globe text-primary hidden md:block"></i>
+                    Yunus Centre[cite: 8]
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="flex md:hidden items-stretch">
+                <button id="mobile-menu-btn" class="bg-headerMenuBg px-6 flex items-center justify-center text-white/90 hover:text-white focus:outline-none">
+                    <i class="fas fa-bars text-3xl font-light"></i>
+                </button>
+            </div>
+
+            <!-- Desktop Nav Navigation -->
+            <nav class="hidden md:flex items-center space-x-6 text-[13px] font-bold text-gray-600 uppercase tracking-wide px-4">
+                <a href="#" class="hover:text-primary transition">ABOUT US</a>
+                <a href="#" class="hover:text-primary transition">SOCIAL BUSINESS</a>
+                <a href="#" class="hover:text-primary transition">VISIT PROGRAM</a>
+                <a href="#" class="hover:text-primary transition">PUBLICATION</a>
+                <a href="#" class="hover:text-primary transition">MEDIA</a>
+                <a href="#" class="hover:text-primary transition">YSBC</a>
+                <a href="#" class="hover:text-primary transition text-lg ml-2"><i class="fas fa-search"></i></a>
+            </nav>
+        </div>
+        
+        <!-- Mobile Nav Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white text-gray-800 border-t border-gray-100 px-4 pt-2 pb-4 space-y-1 shadow-lg absolute w-full left-0">
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-primary uppercase">About Us</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-primary uppercase">Social Business</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-primary uppercase">Visit Program</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-primary uppercase">Publication</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-primary uppercase">Media</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-primary uppercase">YSBC</a>
+        </div>
+    </header>
+
+    <!-- Page Header Banner (Hidden on Mobile as per preview) -->
+    <section class="hidden md:block bg-gray-100 py-6 border-b border-gray-200 shadow-inner">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800 uppercase tracking-wide">Gallery</h1>
+            <div class="text-sm text-gray-500">
+                <a href="#" class="hover:text-primary">Home</a> <span class="mx-1 text-gray-300">/</span> 
+                <span class="text-gray-700 font-semibold">Gallery</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Gallery Feed -->
+    <section class="max-w-7xl mx-auto px-4 py-6 md:py-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-8 gap-y-10">
+            
+            <!-- Gallery Item 1 -->
+            <div class="flex flex-col md:bg-white md:rounded md:border md:border-gray-200 md:shadow-sm group cursor-pointer hover:shadow-md transition">
+                <!-- Mobile Title (Above image) -->
+                <h3 class="font-bold text-gray-800 text-[17px] leading-snug mb-3 md:hidden">Japanese delegation from the YSBC at Kyushu University[cite: 8]</h3>
+                
+                <div class="overflow-hidden md:rounded-t">
+                    <img src="https://placehold.co/800x500/eeeeee/999999?text=Delegation+Image" alt="Japanese Delegation" class="w-full h-auto md:h-64 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                
+                <!-- Desktop Title (Below image in a card) -->
+                <div class="hidden md:flex p-5 text-center flex-grow items-center justify-center border-t border-gray-100">
+                    <h3 class="font-bold text-gray-800 text-[15px] leading-snug">Japanese delegation from the YSBC at Kyushu University[cite: 8]</h3>
+                </div>
+            </div>
+
+            <!-- Gallery Item 2 -->
+            <div class="flex flex-col md:bg-white md:rounded md:border md:border-gray-200 md:shadow-sm group cursor-pointer hover:shadow-md transition">
+                <!-- Mobile Title (Above image) -->
+                <h3 class="font-bold text-gray-800 text-[17px] leading-snug mb-3 md:hidden">Home Page Banner[cite: 8]</h3>
+                
+                <div class="overflow-hidden md:rounded-t">
+                    <img src="https://placehold.co/800x500/eeeeee/999999?text=Super+Happyyness" alt="Super Happyyness Festival" class="w-full h-auto md:h-64 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                
+                <!-- Desktop Title (Below image in a card) -->
+                <div class="hidden md:flex p-5 text-center flex-grow items-center justify-center border-t border-gray-100">
+                    <h3 class="font-bold text-gray-800 text-[15px] leading-snug">Home Page Banner[cite: 8]</h3>
+                </div>
+            </div>
+
+            <!-- Gallery Item 3 -->
+            <div class="flex flex-col md:bg-white md:rounded md:border md:border-gray-200 md:shadow-sm group cursor-pointer hover:shadow-md transition">
+                <!-- Mobile Title (Above image) -->
+                <h3 class="font-bold text-gray-800 text-[17px] leading-snug mb-3 md:hidden">Summer of Purpose 2020[cite: 8]</h3>
+                
+                <div class="overflow-hidden md:rounded-t">
+                    <img src="https://placehold.co/800x500/eeeeee/999999?text=Summer+of+Purpose" alt="Summer of Purpose" class="w-full h-auto md:h-64 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                
+                <!-- Desktop Title (Below image in a card) -->
+                <div class="hidden md:flex p-5 text-center flex-grow items-center justify-center border-t border-gray-100">
+                    <h3 class="font-bold text-gray-800 text-[15px] leading-snug">Summer of Purpose 2020[cite: 8]</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- View All Link (Matches Mobile Layout Below Grid) -->
+        <div class="mt-8 text-left md:text-center pb-4">
+            <a href="#" class="font-bold text-gray-800 text-base md:text-sm hover:text-primary transition underline-offset-4 hover:underline">View All Galleries[cite: 8]</a>
+        </div>
+    </section>
+
+    <!-- Global Layout Master Footer Section -->
+    <footer class="bg-footerBlue text-white pt-10 pb-6 px-6 text-center md:text-left mt-4 border-t-4 border-primary">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-10">
+            <!-- Col 1: Contact Logistics -->
+            <div class="flex flex-col items-center md:items-start">
+                <h2 class="text-2xl font-bold mb-1">Yunus Centre[cite: 8]</h2>
+                <p class="text-sm text-blue-200 mb-6 font-semibold">Global Hub for Social Business[cite: 8]</p>
+                <div class="text-[15px] text-blue-100 flex flex-col items-center md:items-start space-y-2">
+                    <p class="flex items-start gap-2 text-left">
+                        <i class="fas fa-map-marker-alt mt-1"></i>
+                        <span>Grameen Bank Bhaban 16th Floor<br>Mirpur 2, Dhaka 1216[cite: 8]</span>
+                    </p>
+                    <p class="flex items-center gap-2 mt-2"><i class="fas fa-phone"></i> +88 02 9023010[cite: 8]</p>
+                    <p class="flex items-center gap-2 mt-2"><i class="fas fa-envelope"></i> info@yunuscentre.org[cite: 8]</p>
+                </div>
+            </div>
+            
+            <!-- Col 2: Context Links -->
+            <div class="flex flex-col items-center md:items-start">
+                <h3 class="text-base font-bold mb-4 uppercase tracking-wider text-blue-100 border-b border-blue-400 inline-block pb-1">Quick Links[cite: 8]</h3>
+                <div class="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 text-[15px] text-blue-100 font-medium">
+                    <a href="#" class="hover:text-white transition">About Us[cite: 8]</a>
+                    <a href="#" class="hover:text-white transition">Events[cite: 8]</a>
+                    <a href="#" class="hover:text-white transition">Social Business[cite: 8]</a>
+                    <a href="#" class="hover:text-white transition">YSBC[cite: 8]</a>
+                    <a href="#" class="hover:text-white transition">Visit Program[cite: 8]</a>
+                    <a href="#" class="hover:text-white transition">News[cite: 8]</a>
+                    <a href="#" class="hover:text-white transition">Publication[cite: 8]</a>
+                </div>
+            </div>
+            
+            <!-- Col 3: Brand Portal Elements -->
+            <div class="flex flex-col items-center md:items-start">
+                <h3 class="text-base font-bold mb-4 uppercase tracking-wider text-blue-100 border-b border-blue-400 inline-block pb-1">Website[cite: 8]</h3>
+                <p class="text-sm text-blue-100 mb-4 leading-relaxed max-w-[280px] md:max-w-none text-center md:text-left">For about Nobel laureate Professor Muhammad Yunus and Social Business Information[cite: 8]</p>
+                <div class="space-y-3 text-[15px] w-full max-w-[280px] md:max-w-sm">
+                    <a href="#" class="bg-white text-gray-800 p-3 rounded shadow flex items-center gap-3 hover:bg-gray-100 transition w-full">
+                        <img src="https://placehold.co/30x30" alt="Yunus Icon" class="rounded border">
+                        <span class="font-semibold text-left">Professor Muhammad Yunus[cite: 8]</span>
+                    </a>
+                    <a href="#" class="bg-white text-gray-800 p-3 rounded shadow flex items-center gap-3 hover:bg-gray-100 transition w-full">
+                        <i class="fas fa-leaf text-green-600 text-xl w-[30px] text-center"></i> 
+                        <span class="font-semibold text-left">Social Business Pedia[cite: 8]</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pt-6 border-t border-blue-400/30 text-[13px] text-blue-200">
+            <p>Copyright ©2018 muhammadyunus.org.<br class="md:hidden"> All Rights Reserved. (Hit Counter)[cite: 8]</p>
+        </div>
+    </footer>
+
+    <!-- Interactivity Script -->
+    <script>
+        document.querySelectorAll('a[href="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+            });
+        });
+
+        // Toggle mobile navigation menu
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
